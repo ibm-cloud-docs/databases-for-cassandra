@@ -63,7 +63,7 @@ WARNING: A manual nodetool repair or a repair operation from the OpsCenter node 
 
 Detailed information on CQL, the Cassandra Query Language, can be found at: https://docs.datastax.com/en/dse/6.0/cql/
 
-Looking for more tools on managing your deployment? You can connect to your deployment with [IBM Cloud CLI](/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli) and the [Cloud Databases CLI plug-in](/docs/databases-cli-plugin?topic=databases-cli-plugin-cdb-reference). Or use the [Cloud Databases API](https://cloud.ibm.com/apidocs/cloud-databases-api).
+Looking for more tools on managing your deployment? You can connect to your deployment with [IBM Cloud CLI](/docs/cli?topic=cli-install-ibmcloud-cli) and the [Cloud Databases CLI plug-in](/docs/databases-cli-plugin?topic=databases-cli-plugin-cdb-reference). Or use the [Cloud Databases API](https://cloud.ibm.com/apidocs/cloud-databases-api).
 
 If you are planning to use {{site.data.keyword.databases-for-cassandra}} for your applications, check out some of our other documentation pages.
 - [Connecting an external application](/docs/databases-for-cassandra?topic=databases-for-cassandra-external-app)

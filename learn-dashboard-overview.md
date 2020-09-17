@@ -33,7 +33,7 @@ The type of database that is offered by the service, and the database version th
 
 ### ID
 
-The ID is a [CRN (Cloud Resource Name)](/docs/resources?topic=resources-crn) which uniquely identifies the database deployment. The CRN is used to refer to the database in the API and can be used with the CLI.
+The ID is a [CRN (Cloud Resource Name)](/docs/account?topic=account-crn) which uniquely identifies the database deployment. The CRN is used to refer to the database in the API and can be used with the CLI.
 
 ## Recent Tasks
 
@@ -92,7 +92,7 @@ The _Settings_ tab contains the UI for many of the tunable settings for your dep
 The _Observability_ tab provides access to the IBM Cloud monitoring, logging, and event tracking integrations available for your deployment. 
 - [Activity Tracker](/docs/databases-for-cassandra?topic=cloud-databases-activity-tracker)
 - [Logging](/docs/databases-for-cassandra?topic=cloud-databases-logging)
-- [Monitoring](/docs/databases-for-cassandra?topic=databases-for-cassandra-monitoring)
+- [Monitoring](/docs/databases-for-cassandra?topic=databases-for-cassandra-sysdig-monitoring)
 
 ## Docs
 

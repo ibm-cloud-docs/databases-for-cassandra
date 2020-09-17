@@ -21,7 +21,7 @@ subcollection: databases-for-cassandra
 # Sysdig Monitoring Integration
 {: #sysdig-monitoring}
 
-Monitoring for {{site.data.keyword.databases-for-cassandra_full}} deployments is provided through integration with the Sysdig Monitoring service. Your deployments forward selected information so you can monitor deployment health and resource usage. To see your {{site.data.keyword.databases-for-cassandra}} dashboards in Sysdig, you must [Enable Platform Metrics](/docs/Monitoring-with-Sysdig?topic=Sysdig-platform_metrics_enabling) in the same region as your deployment. If you have deployments in more than one region, you must provision Sysdig and enable platform metrics in each region.
+Monitoring for {{site.data.keyword.databases-for-cassandra_full}} deployments is provided through integration with the Sysdig Monitoring service. Your deployments forward selected information so you can monitor deployment health and resource usage. To see your {{site.data.keyword.databases-for-cassandra}} dashboards in Sysdig, you must [Enable Platform Metrics](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-platform_metrics_enabling) in the same region as your deployment. If you have deployments in more than one region, you must provision Sysdig and enable platform metrics in each region.
 
 To access Sysdig from your deployment, use the _Monitoring_ link from the right menu. (If you do not already have a Sysdig service in the same region as your deployment it says _Add monitoring_.)
 

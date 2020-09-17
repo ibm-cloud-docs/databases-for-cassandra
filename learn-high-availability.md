@@ -45,7 +45,7 @@ create keyspace if not exists ibm with replication = {'class' : 'NetworkTopology
 Setting a replication factor of 1 results in your data becoming unavailable at times due to routine internal maintenance or other interruptions. To help ensure availability of data, it is recommended to set a replication factor of at least 3.
 {: note} 
 
-Use [Sysdig](/docs/Monitoring-with-Sysdig?topic=Sysdig-platform_metrics_enabling) to monitor your deployment. Accordingly, adjust either by [manually scaling](/docs/databases-for-cassandra?topic=databases-for-cassandra-resources-scaling), or by using the [autoscaling feature](/docs/databases-for-cassandra?topic=databases-for-cassandra-autoscaling) to ensure continued high availability.  
+Use [Sysdig](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-platform_metrics_enabling) to monitor your deployment. Accordingly, adjust either by [manually scaling](/docs/databases-for-cassandra?topic=databases-for-cassandra-resources-scaling), or by using the [autoscaling feature](/docs/databases-for-cassandra?topic=databases-for-cassandra-autoscaling) to ensure continued high availability.  
 
 ## SLA
 

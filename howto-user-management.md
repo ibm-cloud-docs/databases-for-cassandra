@@ -45,7 +45,7 @@ Any user created by using the Service Credentials UI, API, or CLI has the same p
 
 You can build more granular controlled accesses by creating users and roles by using the database functions. This procedure is outlined in the DataStax [Database roles documentation here](https://docs.datastax.com/en/cql-oss/3.3/cql/cql_using/useSecureRoles.html){: external}. 
 
-Users that are created directly from the API and CLI do not appear in _Service Credentials_, but you can [add them](/docs/databases-for-cassandra?topic=databases-for-cassandra-getting-connection-strings#creating-users-in-service-credentials) if you choose.
+Users that are created directly from the API and CLI do not appear in _Service Credentials_, but you can [add them](#creating-users-in-service-credentials) if you choose.
 
 ## Additional Users and Connection Strings
 
@@ -117,7 +117,7 @@ echo 'pasted bundle contents' | base64 -D > formation_id_endpoint_type.zip
 
 ### Creating Users from the command line
 
-If you manage your service through the {{site.data.keyword.cloud_notm}} CLI and the [cloud databases plug-in](/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli), you can create a new user with `cdb user-create`. For example, to create a new user for an "example-deployment", use the following command.
+If you manage your service through the {{site.data.keyword.cloud_notm}} CLI and the [cloud databases plug-in](/docs/cli?topic=cli-install-ibmcloud-cli), you can create a new user with `cdb user-create`. For example, to create a new user for an "example-deployment", use the following command.
 ```
 ibmcloud cdb user-create example-deployment <newusername> <newpassword>
 ```
@@ -152,7 +152,7 @@ Generating credentials from an existing user does not check for or create that u
 
 **CQLSH example** 
 
-Specify the local file path to the `<formation_id>_<endpoint_type>.zip` file that you downloaded from your {{site.data.keyword.databases-for-cassandra}} database Connections pane. See the [Getting Connection Strings](/docs/databases-for-cassandra?topic=databases-for-cassandra-howto-getting-connection-strings) page for more details on downloading the connection bundle.
+Specify the local file path to the `<formation_id>_<endpoint_type>.zip` file that you downloaded from your {{site.data.keyword.databases-for-cassandra}} database Connections pane. See the [Getting Connection Strings](/docs/databases-for-cassandra?topic=databases-for-cassandra-getting-connection-strings) page for more details on downloading the connection bundle.
 
 ```
 ./bin/cqlsh -u username -p password -b /path/to/secure-connect-database_name.zip
@@ -162,7 +162,7 @@ More details on connecting with CQLSH are in the [DataStax documentation](https:
 
 **Java example**
 
-Specify the local file path to the `<formation_id>_<endpoint_type>.zip` file that you downloaded from your {{site.data.keyword.databases-for-cassandra}} database Connections pane. See the [Getting Connection Strings](/docs/databases-for-cassandra?topic=databases-for-cassandra-howto-getting-connection-strings) page for more details on downloading the connection bundle.
+Specify the local file path to the `<formation_id>_<endpoint_type>.zip` file that you downloaded from your {{site.data.keyword.databases-for-cassandra}} database Connections pane. See the [Getting Connection Strings](/docs/databases-for-cassandra?topic=databases-for-cassandra-getting-connection-strings) page for more details on downloading the connection bundle.
 
 ```
 .withCloudSecureConnectBundle(Paths.get(getSecureConnectionBundlePath()))
