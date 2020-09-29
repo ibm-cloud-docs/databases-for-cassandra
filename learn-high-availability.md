@@ -49,5 +49,5 @@ Use [Sysdig](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-platform_
 
 ## High availability, disaster recovery, and SLA resources
 
-{{site.data.keyword.databases-for-cassandra}} deployments conform to the {{site.data.keyword.cloud_notm}} Databases [HA, DR, and SLA](/cloud-databases/cloud-databases-ha-dr) terms.
+{{site.data.keyword.databases-for-cassandra}} deployments conform to the {{site.data.keyword.cloud_notm}} Databases [HA, DR, and SLA](/docs/cloud-databases?topic=cloud-databases-ha-dr) terms.
 
