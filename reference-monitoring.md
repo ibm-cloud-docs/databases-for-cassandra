@@ -51,7 +51,6 @@ If you have deployments that are in a Single-zone Region (SZR) - `osl01`, `che01
 | [IO utilization in percent 60-minute average](#ibm_databases-for-cassandra_disk_io_utilization_percent_average_60m) | 
 | [IOPS read and write total count for an instance.](#ibm_databases-for-cassandra_disk_iops_read_write_total) | 
 | [Max allowed memory for an instance.](#ibm_databases-for-cassandra_memory_limit_bytes) | 
-| [Read replica replication lag.](#ibm_databases-for-cassandra_read_replica_replication_lag_bytes) | 
 | [The total number of connections used.](#ibm_databases-for-cassandra_total_connections) | 
 | [Total disk space for an instance.](#ibm_databases-for-cassandra_disk_total_bytes) | 
 | [Used CPU for an instance.](#ibm_databases-for-cassandra_cpu_used_percent) | 
@@ -136,19 +135,6 @@ The maximum amount of memory available to your deployment.
 | `Value Type`  | `byte` |
 | `Segment By` | `Service instance` |
 {: caption="Table 7. Max allowed memory for an instance metric metadata" caption-side="top"}
-
-### Read replica replication lag
-{: #ibm_databases-for-cassandra_read_replica_replication_lag_bytes}
-
-How far behind a {{site.data.keyword.databases-for-cassandra}} read-only replica is, in bytes.
-
-| Metadata | Description |
-|----------|-------------|
-| `Metric Name` | `ibm_databases-for-cassandra_read_replica_replication_lag_bytes`|
-| `Metric Type` | `gauge` |
-| `Value Type`  | `count` |
-| `Segment By` | `Service instance` |
-{: caption="Table 8. Read replica replication lag metric metadata" caption-side="top"}
 
 ### The total number of connections in use
 {: #ibm_databases-for-cassandra_total_connections}
