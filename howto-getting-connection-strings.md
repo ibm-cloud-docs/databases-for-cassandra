@@ -21,9 +21,9 @@ subcollection: databases-for-cassandra
 # Getting Connection Strings
 {: #connection-strings}
 
-In order to connect to {{site.data.keyword.databases-for-cassandra_full}}, you need some users and connection strings. Connection Strings for your deployment are displayed on the _Dashboard Overview_, in the _Connections_ pane. 
+In order to connect to {{site.data.keyword.databases-for-cassandra_full}}, you need some users and connection strings. Connection Strings for your deployment are displayed on the _Dashboard Overview_, in the _Endpoints_ pane. 
 
-![Connections pane on the Dashboard Overview](images/secure_connect_bundle_zip.png)
+![Endpoints pane on the Dashboard Overview](images/secure-connect-bundle-2.png)
 
 A {{site.data.keyword.databases-for-cassandra}} deployment is provisioned with an admin user, and after [setting the admin password](/docs/databases-for-cassandra?topic=databases-for-cassandra-admin-password) you can use its connection strings to connect to your deployment.
 {: tip}

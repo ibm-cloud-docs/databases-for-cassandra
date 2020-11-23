@@ -23,7 +23,7 @@ subcollection: databases-for-cassandra
 # Connecting an external application
 {: #external-app}
 
-Your applications and drivers use connection strings to make a connection to {{site.data.keyword.databases-for-cassandra_full}}. The service provides connection strings specifically for drivers and applications. Connection strings are displayed in the _Connections_ pane of your deployment's _Overview_, and can also be retrieved from the [cloud databases CLI plug-in](/docs/databases-cli-plugin?topic=databases-cli-plugin-cdb-reference#deployment-connections), and the [API](https://{DomainName}/apidocs/cloud-databases-api#discover-connection-information-for-a-deployment-f-e81026).
+Your applications and drivers use connection strings to make a connection to {{site.data.keyword.databases-for-cassandra_full}}. The service provides connection strings specifically for drivers and applications. Connection strings are displayed in the _Endpoints_ pane of your deployment's _Overview_, and can also be retrieved from the [cloud databases CLI plug-in](/docs/databases-cli-plugin?topic=databases-cli-plugin-cdb-reference#deployment-connections), and the [API](https://{DomainName}/apidocs/cloud-databases-api#discover-connection-information-for-a-deployment-f-e81026).
 
 The connection strings can be used by any of the credentials you created on your deployment. While you can use the admin user for all of your connections and applications, it might be better to create users specifically for your applications to connect with. Documentation on generating credentials is on the [Getting Connection Strings](/docs/databases-for-cassandra?topic=databases-for-cassandra-connection-strings) page.
 
@@ -80,7 +80,7 @@ All connections to {{site.data.keyword.databases-for-cassandra}} are TLS 1.2 ena
 
 ### Using the self-signed certificate
 
-1. Download the secure connect bundle compressed file from the _Connections_ pane of the endpoint information. (You can use the Name that is provided or your own file name).
+1. Download the secure connect bundle compressed file from the _Endpoints_ pane of the endpoint information. (You can use the Name that is provided or your own file name).
 2. Provide the path to the compressed file that contains the certificate to the CQLSH command to connect the driver or client: 
 ```
 ./bin/cqlsh -u admin -p <password> -b /<path_to_secure-connect-bundle.zip>
