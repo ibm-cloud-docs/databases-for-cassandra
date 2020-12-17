@@ -33,6 +33,7 @@ Databases For DataStax
 	Managing Resources
 		howto-resources-scaling.md
 		howto-autoscaling.md
+		howto-horizontal-scaling.md
 
 	/cloud-databases/cloud-databases-dashboard-backups
 	/cloud-databases/cloud-databases-allowlisting
@@ -42,7 +43,11 @@ Databases For DataStax
 		/cloud-databases/cloud-databases-tutorial-k8s-app
 		/cloud-databases/cloud-databases-tutorial-cf-app
 	{: .navgroup-end}
-
+	
+	{: .navgroup id="help"}
+	ts-connect.md
+	{: .navgroup-end}
+	
 	{: .navgroup id="reference"}
 	/databases-cli-plugin/databases-cli-plugin-cdb-reference
 	[Cloud Databases API](https://cloud.ibm.com/apidocs/cloud-databases-api)

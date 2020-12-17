@@ -1,0 +1,22 @@
+{
+    "troubleshoot-connect": [
+        "How do I connect to my DataStax deployment?",
+        "cannot connect to my Postgres instance",
+        "can't connect to DataStax database",
+        "error connecting to DataStax deployment ",
+        "issue connecting to PostgeSQL Via Command line",
+        "problem connecting to my DataStax production db",
+        "errors connecting external application to DataStax database ",
+        "application recieving timeouts when connecting to DataStax Database",
+        "external application logging Intermittent connection timeouts to ICD postgres Deployment",
+        "error when connecting External app to Databases for DataStax",
+        "DataStax Database will not connect to my external application ",
+        "VMware vSphere VMs unable to connect to DataStax",
+        "AppConnect in IBM Cloud cannot connect to DataStax DB",
+        "Cloud foundry performance issues connecting to DataStax ",
+        "Cloud Application lost connection to DataStax database",
+        "Exception when connecting Cloud Application to DataStax",
+        "Why can't I connect to my DataStax deployment",
+        "intermittent connection timeouts for DataStax"
+    ]
+}
