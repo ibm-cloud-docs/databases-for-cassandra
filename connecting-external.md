@@ -1,7 +1,7 @@
 ---
 copyright:
-  years: 2017, 2020
-lastupdated: "2020-08-06"
+  years: 2017, 2021
+lastupdated: "2021-01-06"
 
 keywords: drivers, python, java, javascript, certificate, cassandra, datastax, dse
 
@@ -48,8 +48,8 @@ DataStax Drivers|{{site.data.keyword.databases-for-cassandra}} connection capabl
 
 More details on these drivers, including upgrade guides, can be found on the [Developing applications with Apache Cassandra and DataStax Enterprise](https://docs.datastax.com/en/devapp/doc/devapp/aboutDrivers.html) page. 
 
-Nodetool, and other drivers that are not explicitly stated in the connection capable table, are not supported by {{site.data.keyword.databases-for-cassandra}}. 
-{: .note} 
+Nodetool, and other drivers that are not explicitly stated in the connection capable table, are not supported by {{site.data.keyword.databases-for-cassandra}}. Only `Datastax Enterprise (DSE)` drivers are supported for use with {{site.data.keyword.databases-for-cassandra}}. 
+{: .note}
 
 ## Connecting using CQLSH
 
@@ -82,17 +82,25 @@ All connections to {{site.data.keyword.databases-for-cassandra}} are TLS 1.2 ena
 
 1. Download the secure connect bundle compressed file from the _Endpoints_ pane of the endpoint information. (You can use the Name that is provided or your own file name).
 2. Provide the path to the compressed file that contains the certificate to the CQLSH command to connect the driver or client: 
-```
-./bin/cqlsh -u admin -p <password> -b /<path_to_secure-connect-bundle.zip>
-```
-{: .pre}
+
+   ```
+   ./bin/cqlsh -u admin -p <password> -b /<path_to_secure-connect-bundle.zip>
+   ```
+   {: .pre}
 
 
 ### CLI plug-in support for the self-signed certificate
 
 You can display the decoded certificate for your deployment with the CLI plug-in with the command `ibmcloud cdb deployment-cacert "your-service-name"`. It decodes the base64 into text. Copy and save the command's output to a file and provide the file's path to the driver.
 
-## Other Drivers
+
+
+
+
+<!-- 
+## Other drivers
+Note that only the Datastax Enterprise (DSE) drivers are supported for use with {{site.data.keyword.databases-for-cassandra_full}}. Use the following information at your own risk:
+{: .note}
 
 DataStax had a vast array of language drivers that are now built in to a single DataStax driver. This new unified driver can also be used to connect to a {{site.data.keyword.databases-for-cassandra}} deployment. This unified DataStax driver is available at the same locations as their existing OSS drivers. Review the following references: 
 
@@ -100,4 +108,5 @@ DataStax had a vast array of language drivers that are now built in to a single 
 - [Developing applications with DataStax drivers](https://docs.datastax.com/en/devapp/doc/devapp/aboutDrivers.html){: external} for driver overview details 
 - [DataStax Documentation](https://docs.datastax.com/en/developer/driver-matrix/doc/common/driverMatrix.html){: external} for installation information
 - [Better Drivers for Cassandra](https://www.datastax.com/blog/2020/01/better-drivers-for-cassandra){: external} blog post that details the move to a unified driver. 
+-->
 
