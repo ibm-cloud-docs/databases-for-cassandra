@@ -36,7 +36,7 @@ Several minutes of database unavailability or connection interruption are not ex
 
 ## Replication, keystores, and High-Availability
 
-To help ensure availability of data, setting the replication factor that matches your deployment is necessary. When you create keyspaces, make sure to set the replication factor to the number of nodes in your cluster. The following example shows this set to 3, where `eu-gb` is the region set based on the location of the formation in the CRN: 
+To help ensure availability of data, setting the replication factor that matches your deployment is necessary. When you create keyspaces, make sure to set the replication factor to the number of nodes (or members) in your cluster. The following example shows this set to 3, where `eu-gb` is the region set based on the location of the formation in the CRN: 
 ```
 create keyspace if not exists ibm with replication = {'class' : 'NetworkTopologyStrategy', 'eu-gb' : 3};
 ```

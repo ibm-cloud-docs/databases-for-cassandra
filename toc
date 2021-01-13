@@ -26,6 +26,7 @@ Databases For DataStax
 	Connecting to Databases for DataStax
 		connecting-external.md
 		connecting-ibmcloud-app.md
+		/cloud-databases/cloud-databases-vpes
 
 	howto-user-management.md
 

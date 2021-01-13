@@ -34,8 +34,8 @@ subcollection: databases-for-cassandra
 
 - [Backups](/docs/databases-for-cassandra?topic=cloud-databases-dashboard-backups) are included in the service. {{site.data.keyword.databases-for-cassandra}} backups reside in [{{site.data.keyword.cos_full_notm}}](/docs/cloud-object-storage?topic=cloud-object-storage-about-cloud-object-storage&cloud-object-storage-about-cloud-object-storage) and are also [encrypted](/docs/cloud-object-storage?topic=cloud-object-storage-security).
 - {{site.data.keyword.databases-for-cassandra}} deployments are configured with a leaderless architecture. Deployments contain only data token owners and replicas of that data.
-- If you deploy to an {{site.data.keyword.cloud_notm}} Multi-Zone Region (MZR), the nodes are spread over the region's availability zone locations. 
-- If you deploy to an {{site.data.keyword.cloud_notm}} Single-Zone Region (SZR), each database node resides on a different host in the data center. 
+- If you deploy to an {{site.data.keyword.cloud_notm}} Multi-Zone Region (MZR), the members (or nodes) are spread over the region's availability zone locations. 
+- If you deploy to an {{site.data.keyword.cloud_notm}} Single-Zone Region (SZR), each database member (or node) resides on a different host in the data center. 
 
 ## SOC 2 Type 2 Certification
 

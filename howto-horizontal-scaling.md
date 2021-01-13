@@ -1,8 +1,8 @@
 ---
 
 Copyright:
-  years: 2019, 2020
-lastupdated: "2020-01-03"
+  years: 2019, 2021
+lastupdated: "2021-01-11"
 
 keywords: databases, scaling, horizontal scaling, cassandra, datastax, dse
 
@@ -21,7 +21,7 @@ subcollection: databases-for-cassandra
 # Adding DataStax Nodes
 {: #horizontal-scaling}
 
-It is possible to scale your {{site.data.keyword.databases-for-cassandra_full}} deployment horizontally by adding more nodes. If your deployment starts to strain or slowdown, adding nodes increases capacity and reliability. When a node is added, {{site.data.keyword.databases-for-cassandra}} automatically balances the workload across all the nodes in your deployment.
+It is possible to scale your {{site.data.keyword.databases-for-cassandra_full}} deployment horizontally by adding more nodes (also referred to as members). If your deployment starts to strain or slowdown, adding nodes increases capacity and reliability. When a node is added, {{site.data.keyword.databases-for-cassandra}} automatically balances the workload across all the nodes in your deployment.
 
 Horizontal scaling can only increase disk and memory allotments. Nodes cannot be scaled down. 
 {: .note}
