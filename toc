@@ -59,5 +59,6 @@ Databases For DataStax
 	/cloud-databases/cloud-databases-key-protect
 	/cloud-databases/cloud-databases-iam
 	/cloud-databases/cloud-databases-service-endpoints
+	/cloud-databases/cloud-databases-hpcs
 	/cloud-databases/cloud-databases-responsibilities-cloud-databases
 	{: .navgroup-end}
