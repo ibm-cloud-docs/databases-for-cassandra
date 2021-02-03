@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2020
-lastupdated: "2020-08-06"
+  years: 2018, 2021
+lastupdated: "2021-02-02"
 
 keywords: nodesync, repair, cassandra, datastax, dse
 subcollection: databases-for-cassandra
@@ -28,6 +28,8 @@ This tutorial is a short introduction to using an {{site.data.keyword.databases-
 - You need to have an [{{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/registration){:new_window}.
 - And a {{site.data.keyword.databases-for-cassandra}} deployment. You can provision one from the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog/services/databases-for-cassandra). Give your deployment a memorable name that appears in your account's Resource List.
 - [Set the Admin Password](/docs/databases-for-cassandra?topic=databases-for-cassandra-admin-password) for your deployment.
+
+Review the [`Getting to production`](/docs/cloud-databases?topic=cloud-databases-best-practices) documentation for general guidance on setting up a basic {{site.data.keyword.databases-for-cassandra_full}} deployment.
 
 ## Connecting with DataStax drivers
 

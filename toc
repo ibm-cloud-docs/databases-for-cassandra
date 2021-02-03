@@ -6,13 +6,13 @@ Databases For DataStax
 
 	{: .navgroup id="learn"}
 	getting-started.md
+	/cloud-databases/cloud-databases-best-practices
 	[What is Databases for DataStax](https://www.ibm.com/cloud/databases-for-datastax)
 	learn-dashboard-overview.md
 	learn-high-availability.md
 	learn-performance.md
 	learn-security-compliance.md
 	learn-pricing.md
-	/cloud-databases/cloud-databases-best-practices
 	{: .navgroup-end}
 
 	{: .navgroup id="howto"}
