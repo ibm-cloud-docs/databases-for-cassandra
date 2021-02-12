@@ -14,7 +14,6 @@ subcollection: databases-for-cassandra
 {:external .external}
 {:screen: .screen}
 {:codeblock: .codeblock}
-{:generic: .ph data-hd-programlang='generic'}
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:javascript: .ph data-hd-programlang='javascript'}

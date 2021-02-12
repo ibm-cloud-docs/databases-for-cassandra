@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2019, 2021
-lastupdated: "2021-01-11"
+lastupdated: "2021-02-04"
 
 keywords: databases, scaling, horizontal scaling, cassandra, datastax, dse
 
@@ -26,9 +26,9 @@ It is possible to scale your {{site.data.keyword.databases-for-cassandra_full}} 
 Horizontal scaling can only increase disk and memory allotments. Nodes cannot be scaled down. 
 {: .note}
 
-Nodes that you add to your deployment are added with the amount of disk, memory, and CPU as the other nodes currently in your deployment. A visual representation of your data members and their resource allocation is available on the _Settings_ tab of your deployment's _Manage_ page. However, horizontal scaling is only available by using the API.
+Nodes that you add to your deployment are added with the amount of disk, memory, and CPU as the other nodes currently in your deployment. A visual representation of your data members and their resource allocation is available on the _Resources_ tab of your deployment's _Manage_ page. However, horizontal scaling is only available by using the API.
 
-![The Scale Resources Pane in _Settings_](images/settings-scaling.png)
+![The Scale Resources Pane in _Resources_](images/settings-scaling.png)
 
 A default {{site.data.keyword.databases-for-cassandra}} deployment runs with three data members in a cluster, and resources are allocated to all three members equally. For example, the minimum storage of a {{site.data.keyword.databases-for-cassandra}} deployment is 20480 MB per member, which equates to an initial size of 61440 MB. The minimum RAM for a {{site.data.keyword.databases-for-cassandra}} deployment is 12288 MB per member, which equates to an initial allocation of 36864 MB. The minimum dedicated cores per deployment are 6 per member, for an initial allocation of 18.
 Billing is based on the _total_ amount of resources that are allocated to the service. 

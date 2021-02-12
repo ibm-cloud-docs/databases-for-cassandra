@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2020, 2021
-lastupdated: "2021-01-11"
+lastupdated: "2021-02-04"
 
 keywords: databases, scaling, autoscaling, memory, disk I/O, cassandra, datastax, dse
 

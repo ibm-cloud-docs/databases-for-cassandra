@@ -1,8 +1,8 @@
 ---
 
 Copyright:
-  years: 2019, 2020
-lastupdated: "2020-08-06"
+  years: 2019, 2021
+lastupdated: "2021-02-04"
 
 keywords: databases, scaling, memory, disk IOPS, CPU, cassandra, datastax, dse
 
@@ -66,7 +66,7 @@ You can increase or decrease the CPU shares to the deployment. With dedicated co
 
 A visual representation of your data members and their resource allocation is available on the _Resources_ tab of your deployment's _Manage_ page. 
 
-![The Scale Resources Pane in _Settings_](images/settings-scaling.png)
+![The Scale Resources Pane in _Resources_](images/settings-scaling.png)
 
 Adjust the slider to increase or decrease the resources that are allocated to your service. The slider controls how much memory or disk is allocated per member. The UI shows the total allocated memory or disk for the position of the slider. Click **Scale** to trigger the scaling operations and return to the dashboard overview. 
 
