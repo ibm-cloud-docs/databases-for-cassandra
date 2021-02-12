@@ -1,7 +1,7 @@
 ---
 copyright:
-  years: 2020, 2021
-lastupdated: "2021-02-04"
+  years: 2020
+lastupdated: "2020-08-06"
 
 keywords: admin password, credentials, cassandra, datastax, dse
 
@@ -22,9 +22,9 @@ subcollection: databases-for-cassandra
 
 The {{site.data.keyword.databases-for-cassandra}} service is provisioned with an admin user.
 
-You must set the admin password before you can use it to connect. To set the password through the {{site.data.keyword.cloud_notm}} dashboard, select _Manage_ from the service dashboard to open the management pane for your service. Open the _Settings_ tab, and use the _Change Database Admin Password_ pane to set a new admin password.
+You must set the admin password before you can use it to connect. To set the password through the {{site.data.keyword.cloud_notm}} dashboard, select _Manage_ from the service dashboard to open the management pane for your service. Open the _Settings_ tab, and use the _Change Password_ pane to set a new admin password.
 
-![The Change Database Admin Password pane in _Settings_](images/settings-admin-password.png)
+![The Admin Password pane in _Settings_](images/settings-admin-password.png)
 
 ## Setting the admin password via the command line
 
