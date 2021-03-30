@@ -27,7 +27,7 @@ Your applications and drivers use connection strings to make a connection to {{s
 The connection strings can be used by any of the credentials you created on your deployment. While you can use the admin user for all of your connections and applications, it might be better to create users specifically for your applications to connect with. Documentation on generating credentials is on the [Getting Connection Strings](/docs/databases-for-cassandra?topic=databases-for-cassandra-connection-strings) page.
 
 Connecting to a {{site.data.keyword.databases-for-cassandra}} deployment: 
-- Use the `<formation_id>_<endpoint_type>.zip` file from [Getting Connection Strings](/docs/databases-for-cassandra?topic=databases-for-cassandra-connection-strings) to set up a connection. This file contains the metadata required to connect to your {{site.data.keyword.databases-for-cassandra}} services including connection strings and self-signed certificates.  It does not contain credentials.
+- Use the `<formation_id>_<endpoint_type>.zip` file from [Getting Connection Strings](/docs/databases-for-cassandra?topic=databases-for-cassandra-connection-strings) to set up a connection. This file contains the metadata that is required to connect to your {{site.data.keyword.databases-for-cassandra}} services including connection strings and self-signed certificates.  It does not contain credentials.
 - Select and install a supported driver from the list in table 1.
 - The driver communicates with the metadata service to retrieve the endpoint
 - The driver automatically connects to the appropriate endpoint 

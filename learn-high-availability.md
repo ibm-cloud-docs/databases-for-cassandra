@@ -1,8 +1,8 @@
 ---
 
 Copyright:
-  years: 2018, 2020
-lastupdated: "2020-09-25"
+  years: 2018, 2021
+lastupdated: "2021-03-30"
 
 keywords: databases, connection limits, cassandra, datastax, dse
 
@@ -15,6 +15,8 @@ subcollection: databases-for-cassandra
 {:external .external}
 {:screen: .screen}
 {:codeblock: .codeblock}
+{:note: .note}
+{:tip: .tip}
 {:pre: .pre}
 
 # High-Availability
@@ -36,16 +38,22 @@ Several minutes of database unavailability or connection interruption are not ex
 
 ## Replication, keystores, and High-Availability
 
+When you create the keyspace it is up to you to define the number of replicas and strategy. Setting the value to `NetworkTopologyStrategy` and number of replicas matching your deployment, the distribution across zones occur automatically (except within single zone regions like Chennai, Oslo, Seoul where replication is contained to that single zone). You can read more about the [replication strategies](https://docs.datastax.com/en/dse/6.0/dse-arch/datastax_enterprise/dbArch/archDataDistributeReplication.html) in the DataStax Enterprise documentation.
+
 To help ensure availability of data, setting the replication factor that matches your deployment is necessary. When you create keyspaces, make sure to set the replication factor to the number of nodes (or members) in your cluster. The following example shows this set to 3, where `eu-gb` is the region set based on the location of the formation in the CRN: 
 ```
 create keyspace if not exists ibm with replication = {'class' : 'NetworkTopologyStrategy', 'eu-gb' : 3};
 ```
 {: pre} 
 
-Setting a replication factor of `1` results in your data becoming unavailable at times due to routine internal maintenance or other interruptions. To help ensure availability of data, it is recommended to set a replication factor of at least 3.
-{: note} 
+Setting a replication factor of `1` results in your data becoming unavailable at times due to routine internal maintenance or other interruptions. To help ensure availability of data, it is recommended to set a replication factor of 3. NetworkTopologyStrategy attempts to place replicas on distinct racks because nodes in the same rack (or similar physical grouping) often fail at the same time due to power, cooling, or network issues. 
 
-Use [Sysdig](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-platform_metrics_enabling) to monitor your deployment. Adjust either by [manually scaling](/docs/databases-for-cassandra?topic=databases-for-cassandra-resources-scaling), or by using the [autoscaling feature](/docs/databases-for-cassandra?topic=databases-for-cassandra-autoscaling) to ensure continued high availability.  
+For your {{site.data.keyword.databases-for-cassandra_full}} deployment, the “data center” attribute equates to a region (for example, `eu-gb`) and the “rack” attribute reflects the actual {{site.data.keyword.cloud_notm}} data center (for example, `lon04/lon05`). Setting a replication factor of `3` helps ensure that replicas are distributed across availability zones.
+
+Using `NetworkTopologyStrategy` and setting a replication factor greater than `1` ensures that replicas are distributed across data centers in multi-zone regions. 
+{: .tip}
+
+Use [{{site.data.keyword.monitoringfull}}](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-platform_metrics_enabling) to monitor your deployment. Adjust either by [manually scaling](/docs/databases-for-cassandra?topic=databases-for-cassandra-resources-scaling), or by using the [autoscaling feature](/docs/databases-for-cassandra?topic=databases-for-cassandra-autoscaling) to ensure continued high availability.  
 
 ## High availability, disaster recovery, and SLA resources
 

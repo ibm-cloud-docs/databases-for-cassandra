@@ -1,7 +1,7 @@
 ---
 copyright:
-  years: 2020
-lastupdated: "2020-08-06"
+  years: 2020, 2021
+lastupdated: "2020-03-30"
 
 keywords: sysdig, monitoring, metrics, iops, disk usage, memory usage, connection usage, cassandra, datastax, dse
 
@@ -18,33 +18,35 @@ subcollection: databases-for-cassandra
 {:tip: .tip}
 {:important: .important}
 
-# Sysdig Monitoring Integration
+# Monitoring Integration
 {: #sysdig-monitoring}
 
-Monitoring for {{site.data.keyword.databases-for-cassandra_full}} deployments is provided through integration with the Sysdig Monitoring service. Your deployments forward selected information so you can monitor deployment health and resource usage. To see your {{site.data.keyword.databases-for-cassandra}} dashboards in Sysdig, you must [Enable Platform Metrics](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-platform_metrics_enabling) in the same region as your deployment. If you have deployments in more than one region, you must provision Sysdig and enable platform metrics in each region.
+Monitoring for {{site.data.keyword.databases-for-cassandra_full}} deployments is provided through integration with the {{site.data.keyword.monitoringfull}} service. Your deployments forward selected information so you can monitor deployment health and resource usage. To see your {{site.data.keyword.databases-for-cassandra}} dashboards in {{site.data.keyword.monitoringfull_notm}}, you must [Enable Platform Metrics](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-platform_metrics_enabling) in the same region as your deployment. If you have deployments in more than one region, you must provision {{site.data.keyword.monitoringfull_notm}} and enable platform metrics in each region.
 
-To access Sysdig from your deployment, use the _Monitoring_ link from the right menu. (If you do not already have a Sysdig service in the same region as your deployment it says _Add monitoring_.)
+To access {{site.data.keyword.monitoringfull_notm}} from your deployment, use the _Monitoring_ link from the right menu. (If you do not already have a monitoring service in the same region as your deployment it says _Add monitoring_.)
 
 The default dashboards are not shown until database instances begin emitting metrics.
 {: .tip}
 
 ![The Monitoring link in a deployment](images/monitoring-ui-link.png)
 
-To access your deployment's Sysdig dashboard from Sysdig, it's in the sidebar, under _IBM_.
+To access your deployment's monitoring dashboard from {{site.data.keyword.monitoringfull_notm}}, it's in the sidebar, under _IBM_.
 
-![Cloud databases dashboard in Sysdig](images/monitoring-ibm-db-list.png)
+![Cloud databases dashboard in monitoring](images/monitoring-ibm-db-list.png)
 
-## Sysdig Availability
+## Monitoring Availability
 
-Sysdig monitoring is available for deployments in every region. Deployments in Multi-zone Regions (MZRs) - `eu-gb`, `eu-de`, `us-east`, `us-south`, `jp-tok`, `au-syd` - have their metrics in the corresponding Sysdig region.
+{{site.data.keyword.monitoringfull_notm}} is available for deployments in every region. Deployments in Multi-zone Regions (MZRs) - `eu-gb`, `eu-de`, `us-east`, `us-south`, `jp-tok`, `au-syd` - have their metrics in the corresponding region.
 
-If you have deployments that are in a Single-zone Region (SZR) - `osl01`, `che01`, or `seo01` - then your logs are forwarded to a Sysdig instance in another region. You need to provision Sysdig instances in the region where your metrics are forwarded to. Metrics for deployments in `osl01` go to `eu-gb`. Metrics for deployments in `seo01` and `che01` go to `jp-tok`. 
+If you have deployments that are in a Single-zone Region (SZR) - `osl01`, `che01`, or `seo01` - then your logs are forwarded to an {{site.data.keyword.monitoringfull_notm}} instance in another region. You need to provision monitoring instances in the region where your metrics are forwarded to. Metrics for deployments in `osl01` go to `eu-gb`. Metrics for deployments in `seo01` and `che01` go to `jp-tok`. 
 
 ## Available Metrics
 {: metrics-by-plan}
 
 | Metric Name |
 |-----------|
+| [Disk read latency mean](#ibm_databases_for_cassandra_disk_read_latency_mean) | 
+| [Disk write latency mean](#ibm_databases_for_cassandra_disk_write_latency_mean) | 
 | [IO utilization in percent 5-minute average](#ibm_databases-for-cassandra_disk_io_utilization_percent_average_5m) |
 | [IO utilization in percent 15-minute average](#ibm_databases-for-cassandra_disk_io_utilization_percent_average_15m) | 
 | [IO utilization in percent 30-minute average](#ibm_databases-for-cassandra_disk_io_utilization_percent_average_30m) | 
@@ -57,6 +59,31 @@ If you have deployments that are in a Single-zone Region (SZR) - `osl01`, `che01
 | [Used disk space for an instance.](#ibm_databases-for-cassandra_disk_used_bytes) | 
 | [Used memory for an instance.](#ibm_databases-for-cassandra_memory_used_bytes) | 
 {: caption="Table 1. Available Metrics" caption-side="top"}
+
+### Disk read latency mean
+{: #ibm_databases_for_cassandra_disk_read_latency_mean}
+
+Disk read latency mean
+
+| Metadata | Description |
+|----------|-------------|
+| `Metric Name` | `ibm_databases_for_cassandra_disk_read_latency_mean`|
+| `Metric Type` | `gauge` |
+| `Value Type`  | `count` |
+| `Segment By` | `Service instance` |
+{: caption="Table 24: Disk read latency mean metric metadata" caption-side="top"}
+### Disk write latency mean
+{: #ibm_databases_for_cassandra_disk_write_latency_mean}
+
+Disk write latency mean
+
+| Metadata | Description |
+|----------|-------------|
+| `Metric Name` | `ibm_databases_for_cassandra_disk_write_latency_mean`|
+| `Metric Type` | `gauge` |
+| `Value Type`  | `count` |
+| `Segment By` | `Service instance` |
+{: caption="Table 26: Disk write latency mean metric metadata" caption-side="top"}
 
 ### IO utilization in percent 5-minute average
 {: #ibm_databases-for-cassandra_disk_io_utilization_percent_average_5m}

@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2020, 2021
-lastupdated: "2021-01-11"
+lastupdated: "2021-03-30"
 
 keywords: databases, scaling, autoscaling, memory, disk I/O, cassandra, datastax, dse
 
@@ -22,7 +22,7 @@ subcollection: databases-for-cassandra
 # Autoscaling
 {: #autoscaling}
 
-Autoscaling is designed to respond to the short-to-medium term trends in resource usage on your {{site.data.keyword.databases-for-cassandra_full}} deployment. When enabled, your deployment is checked at the interval you specify. If it is running short on resources, more resources are added to the deployment. To keep an eye on your resources, use the [Monitoring integration](/docs/databases-for-cassandra?topic=databases-for-cassandra-sysdig-monitoring), which provides metrics for memory, disk space, and disk I/O utilization.
+Autoscaling is designed to respond to the short-to-medium term trends in resource usage on your {{site.data.keyword.databases-for-cassandra_full}} deployment. When enabled, your deployment is checked at the interval you specify. If it is running short on resources, more resources are added to the deployment. To keep an eye on your resources, use the [{{site.data.keyword.monitoringfull}} integration](/docs/databases-for-cassandra?topic=databases-for-cassandra-sysdig-monitoring), which provides metrics for memory, disk space, and disk I/O utilization.
 
 You can set your deployment to autoscale disk, RAM, or both.
 
@@ -48,7 +48,7 @@ The resource numbers refer to each database member (or node) in a deployment. Fo
 
 - A few scaling operations can be more long running than others. Drastically increasing RAM or Disk can take longer than smaller increases to account for provisioning more underlying hardware resources.
 
-- Autoscaling operations are logged in [Activity Tracker](/docs/databases-for-cassandra?topic=cloud-databases-activity-tracker).
+- Autoscaling operations are logged in [{{site.data.keyword.at_full}}](/docs/databases-for-cassandra?topic=cloud-databases-activity-tracker).
 
 - Limits
   - can't set anything to scale in an interval less than 60 seconds.

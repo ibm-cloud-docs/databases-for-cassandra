@@ -1,8 +1,8 @@
 ---
 
 Copyright:
-  years: 2019, 2020
-lastupdated: "2020-08-06"
+  years: 2019, 2021
+lastupdated: "2021-02-04"
 
 keywords: databases, scaling, memory, disk IOPS, CPU, cassandra, datastax, dse
 
@@ -34,7 +34,7 @@ Billing is based on the _total_ amount of resources that are allocated to the se
 
 Your disk allocation must be enough to store all of your data. Your data is replicated to all data members so the total amount of disk you use is at least twice the size of your data set. 
 
-Disk allocation also affects the performance of the disk, with larger disks experiencing higher performance. Baseline Input-Output Operations per second (IOPS) performance for disk is 10 IOPS for each GB. Scale disk to increase the IOPS your deployment can handle.
+Disk allocation also affects the performance of the disk, with larger disks experiencing higher performance. Baseline input/output operations per second (IOPS) performance for disk is 10 IOPS for each GB. Scale disk to increase the IOPS your deployment can handle.
 
 You cannot scale down storage.
 {: .tip} 
@@ -45,7 +45,7 @@ If you find that your deployment is suffering from performance issues due to a l
 
 ### Dedicated Cores
 
-You can increase or decrease the CPU shares to the deployment. With dedicated cores, your resource group is given a single-tenant host with a reserve of CPU shares. Your deployment is then guaranteed number of CPUs you specify over the 6 dedicated cores per member minimum.
+You can increase or decrease the CPU shares to the deployment. With dedicated cores, your resource group is given a single-tenant host with a reserve of CPU shares. Your deployment is then guaranteed number of CPUs you specify over the six dedicated cores per member minimum.
 
 ## Scaling Considerations
 
@@ -58,7 +58,7 @@ You can increase or decrease the CPU shares to the deployment. With dedicated co
 
 - A few scaling operations can be more long running than others.  Similarly, drastically increasing CPU, RAM, or Disk can take longer than smaller increases to account for provisioning more underlying hardware resources.
 
-- Scaling operations are logged in [Activity Tracker](/docs/databases-for-cassandra?topic=cloud-databases-activity-tracker).
+- Scaling operations are logged in [{{site.data.keyword.at_full}}](/docs/databases-for-cassandra?topic=cloud-databases-activity-tracker).
 
 - If you find consistent trends in resource usage or would like to set up scaling when certain resource thresholds are reached, consider enabling [autoscaling](/docs/databases-for-cassandra?topic=databases-for-cassandra-autoscaling) on your deployment.
 

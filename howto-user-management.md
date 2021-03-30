@@ -152,17 +152,17 @@ Generating credentials from an existing user does not check for or create that u
 
 **CQLSH example** 
 
-Specify the local file path to the `<formation_id>_<endpoint_type>.zip` file that you downloaded from your {{site.data.keyword.databases-for-cassandra}} database Connections pane. See the [Getting Connection Strings](/docs/databases-for-cassandra?topic=databases-for-cassandra-getting-connection-strings) page for more details on downloading the connection bundle.
+Specify the local file path to the `<formation_id>_<endpoint_type>.zip` file that you downloaded from your {{site.data.keyword.databases-for-cassandra}} database Connections pane. See the [Getting Connection Strings](/docs/databases-for-cassandra?topic=databases-for-cassandra-connection-strings) page for more details on downloading the connection bundle.
 
 ```
 ./bin/cqlsh -u username -p password -b /path/to/secure-connect-database_name.zip
 ```
 {: pre}
-More details on connecting with CQLSH are in the [DataStax documentation](https://docs.datastax.com/en/astra/aws/doc/dscloud/astra/dscloudConnectcqlshConsole.html){: external}. 
+More details on connecting with CQLSH are in the [DataStax documentation](https://docs.datastax.com/en/dse/6.8/cql/cql/cql_using/startCqlshStandalone.html){: external}. 
 
 **Java example**
 
-Specify the local file path to the `<formation_id>_<endpoint_type>.zip` file that you downloaded from your {{site.data.keyword.databases-for-cassandra}} database Connections pane. See the [Getting Connection Strings](/docs/databases-for-cassandra?topic=databases-for-cassandra-getting-connection-strings) page for more details on downloading the connection bundle.
+Specify the local file path to the `<formation_id>_<endpoint_type>.zip` file that you downloaded from your {{site.data.keyword.databases-for-cassandra}} database Connections pane. See the [Getting Connection Strings](/docs/databases-for-cassandra?topic=databases-for-cassandra-connection-strings) page for more details on downloading the connection bundle.
 
 ```
 .withCloudSecureConnectBundle(Paths.get(getSecureConnectionBundlePath()))
@@ -175,4 +175,4 @@ Set the username and password for your {{site.data.keyword.databases-for-cassand
 ```
 {: pre}
 
-More details on connecting with the Java driver are in the [DataStax documentation](https://docs.datastax.com/en/astra/aws/doc/dscloud/astra/dscloudConnectJavaDriver.html){: external}
+More details on connecting with the Java driver are in the [DataStax documentation](https://docs.datastax.com/en/developer/java-driver-dse/2.3/manual/cloud/){: external}

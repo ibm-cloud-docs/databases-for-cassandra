@@ -1,7 +1,7 @@
 ---
 Copyright:
-  years: 2018, 2020
-lastupdated: "2020-08-06"
+  years: 2018, 2021
+lastupdated: "2021-03-25"
 
 keywords: databases, soc, hipaa, gdpr, terms, cassandra, datastax, dse
 
@@ -36,6 +36,7 @@ subcollection: databases-for-cassandra
 - {{site.data.keyword.databases-for-cassandra}} deployments are configured with a leaderless architecture. Deployments contain only data token owners and replicas of that data.
 - If you deploy to an {{site.data.keyword.cloud_notm}} Multi-Zone Region (MZR), the members (or nodes) are spread over the region's availability zone locations. 
 - If you deploy to an {{site.data.keyword.cloud_notm}} Single-Zone Region (SZR), each database member (or node) resides on a different host in the data center. 
+- The [replication factor](/docs/databases-for-cassandra?topic=databases-for-cassandra-high-availability#replication-keystores-and-high-availability) should be, at most, 3 per data center to ensure replication across availability zones. 
 
 ## SOC 2 Type 2 Certification
 
