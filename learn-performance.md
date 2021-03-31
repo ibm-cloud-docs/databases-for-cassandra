@@ -24,7 +24,7 @@ subcollection: databases-for-cassandra
 
 ## Monitoring your deployment
 
-{{site.data.keyword.databases-for-cassandra}} deployments offer an integration with the [{{site.data.keyword.monitoringfull}} service](/docs/databases-for-cassandra?topic=databases-for-cassandra-sysdig-monitoring) for basic monitoring of resource usage on your deployment. Many of the available metrics, like disk usage and Input-Output Operations Per Second (IOPS), are presented to help you configure [autoscaling](/docs/databases-for-cassandra?topic=databases-for-cassandra-autoscaling) on your deployment. Observing trends in your usage and configuring the autoscaling to respond to them can help alleviate performance problems before your databases become unstable due to resource exhaustion.
+{{site.data.keyword.databases-for-cassandra}} deployments offer an integration with the [{{site.data.keyword.monitoringfull}} service](/docs/databases-for-cassandra?topic=databases-for-cassandra-monitoring) for basic monitoring of resource usage on your deployment. Many of the available metrics, like disk usage and Input-Output Operations Per Second (IOPS), are presented to help you configure [autoscaling](/docs/databases-for-cassandra?topic=databases-for-cassandra-autoscaling) on your deployment. Observing trends in your usage and configuring the autoscaling to respond to them can help alleviate performance problems before your databases become unstable due to resource exhaustion.
 
 ## Disk Input-Output Operations Per Second (IOPS)
 

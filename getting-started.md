@@ -46,7 +46,7 @@ Only DataStax drivers that are explicitly stated in the table at [Connecting an 
 
 [NodeSync](https://docs.datastax.com/en/dse/6.7/dse-admin/datastax_enterprise/config/aboutNodesync.html){: external} is a continuous repair service that runs in the background to validate data is in sync on all replicas. It is automatic and reduces the need for manual repairs. For operational simplicity and performance, {{site.data.keyword.databases-for-cassandra}} enables the NodeSync service on all keyspaces and tables to handle node repairs. Traditional repairs are unnecessary, as the automation ensures that NodeSync handles the repairs for you.  
 
-While the automation will enable NodeSync for you, you can also manually create tables with NodeSync enabled to ensure that the service can repair the tables' data when necessary: 
+While the automation enables NodeSync for you, you can also manually create tables with NodeSync enabled to ensure that the service can repair the tables' data when necessary: 
 ```
 CREATE TABLE myTable (...) WITH nodesync = { 'enabled': 'true'};
 ```
@@ -54,11 +54,22 @@ CREATE TABLE myTable (...) WITH nodesync = { 'enabled': 'true'};
 
 Review the detailed DataStax documentation on [enabling the NodeSync service](https://docs.datastax.com/en/dse/6.7/dse-admin/datastax_enterprise/config/enablingNodesync.html){: external}.  
 
-Nodetool is unsupported. Manual repairs that are issued against any table enabled with the NodeSync service [are ignored](https://docs.datastax.com/en/opscenter/6.5/opsc/online_help/services/opscNodeSyncService.html#NodeSyncServiceversusRepairService){: external}:
+Nodetool is unsupported. Manual repairs that are issued against any table that is enabled with the NodeSync service [are ignored](https://docs.datastax.com/en/opscenter/6.5/opsc/online_help/services/opscNodeSyncService.html#NodeSyncServiceversusRepairService){: external}:
 {: .tip}
 ```
 WARNING: A manual nodetool repair or a repair operation from the OpsCenter node administration menu fails to run if a NodeSync-enabled table is targeted.
 ```
+
+## Recommendations
+### Benchmark before production
+- Neither `cqlsh` and `COPY` are not recommended for benchmarking, as `COPY` does not mimic typical client behavior. Instead, [`nosqlbench`](https://github.com/nosqlbench/nosqlbench) can be used for benchmarking 
+### Data migrations
+- `DSBULK` is recommended for data migration. See the [DSBULK documentation](https://docs.datastax.com/en/dsbulk/doc/dsbulk/reference/dsbulkCmd.html) from DataStax for more information. 
+### Resource configurations
+- The recommended configuration for a node is: 
+  - 16 CPUs 
+  - 32 GB to 64 GB RAM 
+  - 16 K disk IOPS (16 k IOPS == 1.6 TB disk)
 
 
 ## Next steps

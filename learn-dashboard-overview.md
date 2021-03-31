@@ -92,7 +92,7 @@ The _Settings_ tab contains the UI for many of the tunable settings for your dep
 The _Observability_ tab provides access to the IBM Cloud monitoring, logging, and event tracking integrations available for your deployment. 
 - [{{site.data.keyword.at_full}}](/docs/databases-for-cassandra?topic=cloud-databases-activity-tracker)
 - [{{site.data.keyword.loganalysisfull}}](/docs/databases-for-cassandra?topic=cloud-databases-logging)
-- [{{site.data.keyword.monitoringfull}}](/docs/databases-for-cassandra?topic=databases-for-cassandra-sysdig-monitoring)
+- [{{site.data.keyword.monitoringfull}}](/docs/databases-for-cassandra?topic=databases-for-cassandra-monitoring)
 
 ## Docs
 
