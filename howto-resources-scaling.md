@@ -49,7 +49,8 @@ You can increase or decrease the CPU shares to the deployment. With dedicated co
 
 ## Scaling Considerations
 
-- With a minimum of 3 members, allocation minimums begin with 12 Gb RAM, 20 GB Disk, and 6 dedicated cores per member.  
+- With a minimum of 3 members, allocation minimums begin with 12 Gb RAM, 20 GB Disk, and 6 dedicated cores per member. 
+   
 - Scaling your deployment up might cause your databases to restart. If you scale RAM or CPU and your deployment needs to be moved to a host with more capacity, then the databases are restarted as part of the move.
 
 - Scaling down RAM or CPU does not trigger database restarts.
@@ -66,7 +67,7 @@ You can increase or decrease the CPU shares to the deployment. With dedicated co
 
 A visual representation of your data members and their resource allocation is available on the _Resources_ tab of your deployment's _Manage_ page. 
 
-![The Scale Resources Pane in _Settings_](images/settings-scaling.png)
+![The Scale Resources Pane in _Resources_](images/settings-scaling.png)
 
 Adjust the slider to increase or decrease the resources that are allocated to your service. The slider controls how much memory or disk is allocated per member. The UI shows the total allocated memory or disk for the position of the slider. Click **Scale** to trigger the scaling operations and return to the dashboard overview. 
 

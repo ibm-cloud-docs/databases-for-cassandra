@@ -53,7 +53,7 @@ For your {{site.data.keyword.databases-for-cassandra_full}} deployment, the “d
 Using `NetworkTopologyStrategy` and setting a replication factor greater than `1` ensures that replicas are distributed across data centers in multi-zone regions. 
 {: .tip}
 
-Use [{{site.data.keyword.monitoringfull}}](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-platform_metrics_enabling) to monitor your deployment. Adjust either by [manually scaling](/docs/databases-for-cassandra?topic=databases-for-cassandra-resources-scaling), or by using the [autoscaling feature](/docs/databases-for-cassandra?topic=databases-for-cassandra-autoscaling) to ensure continued high availability.  
+Use [{{site.data.keyword.monitoringfull}}](/docs/monitoring?topic=monitoring-platform_metrics_enabling) to monitor your deployment. Adjust either by [manually scaling](/docs/databases-for-cassandra?topic=databases-for-cassandra-resources-scaling), or by using the [autoscaling feature](/docs/databases-for-cassandra?topic=databases-for-cassandra-autoscaling) to ensure continued high availability.  
 
 ## High availability, disaster recovery, and SLA resources
 

@@ -60,6 +60,20 @@ Nodetool is unsupported. Manual repairs that are issued against any table that i
 WARNING: A manual nodetool repair or a repair operation from the OpsCenter node administration menu fails to run if a NodeSync-enabled table is targeted.
 ```
 
+## Recommendations
+### Benchmark before production
+- Neither `cqlsh` and `COPY` are not recommended for benchmarking, as `COPY` does not mimic typical client behavior. Instead, [`nosqlbench`](https://github.com/nosqlbench/nosqlbench) can be used for benchmarking 
+
+### Data migrations
+- `DSBULK` is recommended for data migration. See the [DSBULK documentation](https://docs.datastax.com/en/dsbulk/doc/dsbulk/reference/dsbulkCmd.html) from DataStax for more information. 
+
+### Resource configurations
+- The recommended configuration for a node is: 
+  - 16 CPUs 
+  - 32 GB to 64 GB RAM 
+  - 16 K disk IOPS (16 k IOPS == 1.6 TB disk)
+
+
 ## Next steps
 
 Detailed information on CQL, the Cassandra Query Language, can be found at: https://docs.datastax.com/en/dse/6.0/cql/

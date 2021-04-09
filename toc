@@ -19,6 +19,7 @@ Databases For DataStax
 	/cloud-databases/cloud-databases-provisioning
 	howto-admin-password.md
 	howto-getting-connection-strings.md
+	dse-search.md
 	/cloud-databases/cloud-databases-deprovisioning
 	/cloud-databases/cloud-databases-ha-dr
 	
