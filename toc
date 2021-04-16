@@ -19,7 +19,6 @@ Databases For DataStax
 	/cloud-databases/cloud-databases-provisioning
 	howto-admin-password.md
 	howto-getting-connection-strings.md
-	dse-search.md
 	/cloud-databases/cloud-databases-deprovisioning
 	/cloud-databases/cloud-databases-ha-dr
 	
@@ -43,6 +42,10 @@ Databases For DataStax
 	Tutorials
 		/cloud-databases/cloud-databases-tutorial-k8s-app
 		/cloud-databases/cloud-databases-tutorial-cf-app
+		
+	{: .topicgroup}
+	Enhancing security
+		/cloud-databases/cloud-databases-manage-security-compliance
 	{: .navgroup-end}
 	
 	{: .navgroup id="help"}
