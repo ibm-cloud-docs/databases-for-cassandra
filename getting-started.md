@@ -73,12 +73,13 @@ WARNING: A manual nodetool repair or a repair operation from the OpsCenter node 
   - 32 GB to 64 GB RAM 
   - 16 K disk IOPS (16 k IOPS == 1.6 TB disk)
 
-
 ## Next steps
 
-Detailed information on CQL, the Cassandra Query Language, can be found at: https://docs.datastax.com/en/dse/6.0/cql/
+Detailed information on CQL, the Cassandra Query Language, can be found by consulting [CQL for DSE Documentation](https://docs.datastax.com/en/dse/6.0/cql/).
 
-Looking for more tools on managing your deployment? You can connect to your deployment with [IBM Cloud CLI](/docs/cli?topic=cli-install-ibmcloud-cli) and the [Cloud Databases CLI plug-in](/docs/databases-cli-plugin?topic=databases-cli-plugin-cdb-reference). Or use the [Cloud Databases API](https://cloud.ibm.com/apidocs/cloud-databases-api).
+Looking to administer your deployment? Consult DataStax's documentation on using the the [standalone CQLSH client](https://docs.datastax.com/en/astra/docs/connecting-to-databases-using-standalone-cqlsh.html). 
+
+You can manage your deployment with [IBM Cloud CLI](/docs/cli?topic=cli-install-ibmcloud-cli), the [Cloud Databases CLI plug-in](/docs/databases-cli-plugin?topic=databases-cli-plugin-cdb-reference), or by using the [Cloud Databases API](https://cloud.ibm.com/apidocs/cloud-databases-api).
 
 If you are planning to use {{site.data.keyword.databases-for-cassandra}} for your applications, check out some of our other documentation pages.
 - [Connecting an external application](/docs/databases-for-cassandra?topic=databases-for-cassandra-external-app)
@@ -87,9 +88,3 @@ If you are planning to use {{site.data.keyword.databases-for-cassandra}} for you
 Also, to ensure the stability of your applications and your database, check out the pages on 
 - [High-Availability](/docs/databases-for-cassandra?topic=databases-for-cassandra-high-availability)
 - [Performance](/docs/databases-for-cassandra?topic=databases-for-cassandra-performance)
-
-
-
-
-
-
