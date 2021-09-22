@@ -1,0 +1,84 @@
+#  Name your file `toc.yaml`
+#  Make sure you include all nav file coding requirements, as defined in https://test.cloud.ibm.com/docs/writing?topic=writing-code-nav
+#  Anything with a fully qualified URL with `http` or `https` will get an external link icon added to the nav entry
+---
+toc:
+  properties:
+    subcollection: databases-for-cassandra
+    version: 2
+    category: database
+    audience: service
+    href: /docs/databases-for-cassandra?topic=databases-for-cassandra-getting-started
+    console-page: /catalog/databases-for-cassandra
+    product-page: https://www.ibm.com/cloud/databases-for-cassandra
+    path: databases-for-cassandra
+    label: Databases For DataStax
+  entries: 
+  - navgroup: 
+      id: learn
+      topics:
+      - getting-started.md
+      - /cloud-databases/cloud-databases-best-practices
+      - link:
+          label: What is Databases for DataStax?
+          href: https://www.ibm.com/cloud/databases-for-datastax
+      - learn-dashboard-overview.md
+      - learn-high-availability.md
+      - learn-performance.md
+      - learn-security-compliance.md
+      - learn-pricing.md
+  - navgroup: 
+      id: howto
+      topics:
+      - howto-admin-password.md
+      - howto-getting-connection-strings.md
+      - /cloud-databases/cloud-databases-provisioning
+      - /cloud-databases/cloud-databases-deprovisioning
+      - /cloud-databases/cloud-databases-ha-dr
+      - topicgroup: 
+          label: Connecting to Databases for DataStax
+          topics: 
+          - connecting-external.md
+          - connecting-ibmcloud-app.md
+      - howto-user-management.md
+      - topicgroup: 
+          label: Managing Resources
+          topics: 
+          - howto-resources-scaling.md
+          - howto-autoscaling.md
+          - howto-horizontal-scaling.md
+      - /cloud-databases/cloud-databases-dashboard-backups
+      - /cloud-databases/cloud-databases-allowlisting
+      - topicgroup: 
+          label: Tutorials
+          topics: 
+          - /cloud-databases/cloud-databases-tutorial-k8s-app
+          - /cloud-databases/cloud-databases-tutorial-cf-app
+      - topicgroup: 
+          label: Enhancing security
+          topics: 
+          - /cloud-databases/cloud-databases-manage-security-compliance
+  - navgroup: 
+      id: help
+      topics:
+      - ts-connect.md
+  - navgroup: 
+      id: reference
+      topics:
+      - /databases-cli-plugin/databases-cli-plugin-cdb-reference
+      - link:
+          label: Cloud Databases API
+          href: https://cloud.ibm.com/apidocs/cloud-databases-api
+      - /cloud-databases/cloud-databases-versioning-policy
+      - topicgroup: 
+          label: Connecting over Private Networks
+          topics: 
+          - /cloud-databases/cloud-databases-vpes
+          - /cloud-databases/cloud-databases-service-endpoints
+      - reference-monitoring.md
+      - /cloud-databases/cloud-databases-activity-tracker
+      - /cloud-databases/cloud-databases-logging
+      - /cloud-databases/cloud-databases-key-protect
+      - /cloud-databases/cloud-databases-iam
+      - /cloud-databases/cloud-databases-hpcs
+      - /cloud-databases/cloud-databases-responsibilities-cloud-databases
