@@ -64,5 +64,3 @@ For more detailed information on configuration and use of DSE Search, refer to t
 
 - [DSE Search documentation](https://docs.datastax.com/en/dse/5.1/dse-dev/datastax_enterprise/search/searchTOC.html)
 - [Capacity planning for DSE Search](https://docs.datastax.com/en/dse-planning/doc/planning/capacityPlanningSearch.html)
-
-
