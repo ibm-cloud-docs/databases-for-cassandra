@@ -36,7 +36,7 @@ Your applications must be designed to handle temporary interruptions to the data
 
 Several minutes of database unavailability or connection interruption are not expected. Open a [support ticket](https://cloud.ibm.com/unifiedsupport/cases/add) with details if you have time periods longer than a minute with no connectivity so we can investigate.
 
-## Replication, keystores, and High-Availability
+## Replication, Keyspaces, and High-Availability
 
 When you create the keyspace it is up to you to define the number of replicas and strategy. Setting the value to `NetworkTopologyStrategy` and number of replicas matching your deployment, the distribution across zones occur automatically (except within single zone regions like Chennai, Oslo, Seoul where replication is contained to that single zone). You can read more about the [replication strategies](https://docs.datastax.com/en/dse/6.0/dse-arch/datastax_enterprise/dbArch/archDataDistributeReplication.html) in the DataStax Enterprise documentation.
 
