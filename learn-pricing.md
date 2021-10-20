@@ -49,6 +49,8 @@ All prices here are in US dollars. To see pricing in your local currency, you ca
 
 ## Using the Pricing Calculator
 
+Templates are provided for ease of use and provide balanced resource allocations appropriate for general purpose workloads. The **Custom** tab can be used to configure Disk, RAM, and vCPU, as desired.
+
 For pricing estimation, click **Add to Estimate** on the [{{site.data.keyword.databases-for-cassandra}} catalog page](https://cloud.ibm.com/catalog/databases-for-cassandra). Input your total consumption across three data members into the calculator. This is roughly tripled the size of your data because your data is replicated to all three members. For example, 20 GB of disk and 12 GB of RAM across three data members would be priced at 60 GB of disk and 36 GB of RAM respectively. 
 
 ![Pricing calculator estimation with 20 GB of disk and 12 GB of RAM, per member](images/pricing-estimate.png)
