@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2017, 2020
-lastupdated: "2021-11-02"
+lastupdated: "2021-11-29"
 
 keywords: databases, pricing, resources, scaling, cassandra, datastax, dse
 
@@ -9,19 +9,19 @@ subcollection: databases-for-cassandra
 
 ---
 
-{:new_window: target="_blank"}
+{:external: .external target="_blank"}
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:tip: .tip}
+{:note: .note}
 
 
 # Pricing
 {: #pricing}
 
-A {{site.data.keyword.databases-for-cassandra_full}} Standard plan deploys as one highly available cluster with three data members. Your data is replicated on all three members. The Standard plan is priced based on the total amount of disk storage, RAM, dedicated cores, and backup storage that is allocated to deployments, prorated hourly. {{site.data.keyword.databases-for-cassandra}} deployments have a minimum of 20 GB of disk and 1 GB of RAM per data member.
+A {{site.data.keyword.databases-for-cassandra_full}} Standard plan deploys as one highly available cluster with three data members. Your data is replicated on all three members. The Standard plan is priced based on the total amount of disk storage, RAM, dedicated cores, and backup storage that is allocated to deployments, prorated hourly. {{site.data.keyword.databases-for-cassandra}} deployments have a minimum of 20 GB of disk and 12 GB of RAM per data member.
 
 ## Cost Breakdown
 {: #cost}
@@ -64,9 +64,9 @@ Users also receive their total disk space purchased, per database, in free backu
 ## Dedicated Cores Pricing
 {: #pricing-cores}
 
-You have the option of selecting the CPU allocation for your deployment. With dedicated cores, your resource group is given a single-tenant host with a guaranteed minimum reserve of cpu shares. Your deployments are then allocated the number of CPUs you specify. The cost of dedicated cores is $100 per core per month, and each member gets the selected number of cores. For example, if you provision a deployment with 6 dedicated cores per member, that is a total of 18 cores, and billed at $1800 per month. 
+You have the option of selecting the CPU allocation for your deployment. With dedicated cores, your resource group is given a single-tenant host with a guaranteed minimum reserve of cpu shares. Your deployments are then allocated the number of CPUs you specify. The cost of dedicated cores is $100 per core per month, and each member gets the selected number of cores. For example, if you provision a deployment with 6 dedicated cores per member, that is a total of 18 cores, and billed at $1,800 per month. 
 
-Dedicated cores are an optional feature. The default `Shared CPU` setting provisions your deployment on hosts with shared compute resources and incurs no additional charge.
+Dedicated cores are an optional feature.{: .note}
 
 ## Scaling per Member
 {: #pricing-scaling}
