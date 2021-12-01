@@ -1,8 +1,8 @@
 ---
 
-Copyright:
+copyright:
   years: 2020, 2021
-lastupdated: "2021-03-30"
+lastupdated: "2021-11-30"
 
 keywords: databases, scaling, autoscaling, memory, disk I/O, cassandra, datastax, dse
 
@@ -10,9 +10,8 @@ subcollection: databases-for-cassandra
 
 ---
 
-{:new_window: target="_blank"}
+{:external: .external target="_blank"}
 {:shortdesc: .shortdesc}
-{:external .external}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
@@ -32,7 +31,7 @@ General Autoscaling parameters
 - How often to scale, measured either in seconds, minutes, or hours.
 - A hard limit on scaling, your deployment stops scaling at the limit.
 
-![Example Autoscaling pane](images/autoscaling-update.png)
+![Example Autoscaling pane](images/autoscaling-update.png){: caption="Figure 1. Example Autoscaling pane" caption-side="bottom"}
 
 Memory - Memory autoscaling is based on Disk I/O utilization in order to provide more memory for disk caching as your read/write load increases. The benefit is that additional memory might alleviate pressure on disk I/O by supporting more caching. Autoscaling configurations based on memory usage are currently not available. 
 
@@ -41,8 +40,9 @@ Disk - Disk autoscaling can scale when either disk usage reaches a certain thres
 The resource numbers refer to each database member (or node) in a deployment. For example, there are three data members in a {{site.data.keyword.databases-for-cassandra}} deployment and if the deployment is scaled with 20 GB of disk and 12 GB of RAM, that means each member gets 20 GB of disk and 12 GB of RAM. The total resources added to your deployment is 60 GB of disk and 36 GB of RAM.
 
 ## Autoscaling Considerations
+{: #autoscaling-consider}
 
-- Scaling your deployment up might cause your databases to restart. If you scale RAM or CPU and your deployment needs to be moved to a host with more capacity, then the databases are restarted as part of the move.
+Scaling your deployment up might cause your databases to restart. If you scale RAM or CPU and your deployment needs to be moved to a host with more capacity, then the databases are restarted as part of the move.
 
 - Disk cannot be scaled down.
 
@@ -51,44 +51,47 @@ The resource numbers refer to each database member (or node) in a deployment. Fo
 - Autoscaling operations are logged in [{{site.data.keyword.at_full}}](/docs/databases-for-cassandra?topic=cloud-databases-activity-tracker).
 
 - Limits
-  - can't set anything to scale in an interval less than 60 seconds.
-  - Maximum Disk = 4 TB per member
-  - Maximum RAM = 112 GB per member
+    - can't set anything to scale in an interval less than 60 seconds.
+    - Maximum Disk = 4 TB per member
+    - Maximum RAM = 112 GB per member
 
 - Autoscaling does not scale down deployments where disk or memory usage shrunk. The RAM provisioned to your deployment remains for your future needs, or until you scale down your deployment manually. The disk provisioned to your deployment remains because disk cannot be scaled down.
 
 - If you need to add resources to your deployment occasionally or rarely, you can [manually scale](/docs/databases-for-cassandra?topic=databases-for-cassandra-resources-scaling) your deployment.
 
 ## Configuring Autoscaling in the UI
+{: #autoscaling-ui}
 
 The Autoscaling pane is on the _Resources_ tab of your deployment's _Manage_ page. To enable scaling, enter your parameters. Then, check the boxes to enable the parameters you are using. Be sure to click **Save Changes** for your configuration to be saved and your changes to take effect.
 
 To disable autoscaling, clear the boxes for the parameters that you no longer want to use. If you clear all the boxes, autoscaling is disabled. Click **Save Changes** to save the configuration.
 
 ## Configuring Autoscaling in the CLI
+{: #autoscaling-cli}
 
 You can get the autoscaling parameters for your deployment through the CLI by using the [`cdb deployment-autoscaling`](/docs/databases-cli-plugin?topic=databases-cli-plugin-cdb-reference#-ibmcloud-cdb-deployment-autoscaling-) command.
-```
+```curl
 ibmcloud cdb deployment-autoscaling <deployment name or CRN> member
 ```
 {: pre}
 
 To enable and set autoscaling parameters through the CLI, use a JSON object or file with the [`cdb deployment-autoscaling-set`](/docs/databases-cli-plugin?topic=databases-cli-plugin-cdb-reference#-ibmcloud-cdb-deployment-autoscaling-set-) command.
-```
+```shell
 ibmcloud cdb deployment-autoscaling-set <deployment name or CRN> member '{"autoscaling": { "memory": {"scalers": {"io_utilization": {"enabled": true, "over_period": "5m","above_percent": 90}},"rate": {"increase_percent": 10.0, "period_seconds": 300,"limit_mb_per_member": 125952,"units": "mb"}}}}'
 ```
 {: pre}
 
 ## Configuring Autoscaling in the API
+{: #autoscaling-api}
 
 You can get the autoscaling parameters for your deployment through the API by sending a `GET` request to the [`/deployments/{id}/groups/{group_id}/autoscaling`](https://cloud.ibm.com/apidocs/cloud-databases-api#get-the-autoscaling-configuration-from-a-deploymen) endpoint. 
-```
+```curl
 curl -X GET -H "Authorization: Bearer $APIKEY" 'https://api.{region}.databases.cloud.ibm.com/v4/ibm/deployments/{id}/groups/member/autoscaling'
 ```
 {: pre}
 
 To enable and set the autoscaling parameters for your deployment through the API, send a `POST` request to the endpoint. Enabling autoscaling works by setting the `scalers` (`io_utilization` or `capacity`) to `true`.
-```
+```curl
 curl -X PATCH https://api.{region}.databases.cloud.ibm.com/v4/ibm/deployments/{id}/groups/member/autoscaling -H 'Authorization: Bearer <>' 
 -H 'Content-Type: application/json' 
 -d '{"autoscaling": {
