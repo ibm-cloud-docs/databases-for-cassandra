@@ -5,6 +5,7 @@
 toc:
   properties:
     subcollection: databases-for-cassandra
+    service-name: databases-for-cassandra-group
     version: 2
     category: database
     audience: service
