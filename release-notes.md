@@ -4,7 +4,7 @@ copyright:
   years: 2018, 2021
 lastupdated: "2022-03-15"
 
-keywords: databases-for-cassandra release notes
+keywords: databases-for-cassandra-group release notes
 
 subcollection: databases-for-cassandra
 
