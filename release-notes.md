@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2022-03-23"
+lastupdated: "2022-03-22"
 
 keywords: databases-for-cassandra release notes
 
@@ -33,9 +33,17 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 General Availability of {{site.data.keyword.databases-for-cassandra_full}}
 :  {{site.data.keyword.databases-for-cassandra_full}} added to the [IBM Cloud Databases](https://www.ibm.com/cloud/databases) family. See blog post announcement [here](https://www.ibm.com/cloud/blog/announcements/ibm-cloud-databases-for-datastax).
 
+## 15 February 2021
+{: #databases-for-cassandra-15feb2021}
+{: release-note}
+
+{{site.data.keyword.databases-for-cassandra}} Horizontal Scaling
+:  Customers may scale {{site.data.keyword.databases-for-cassandra_full}} by adding members to their database instance. See blog post announcement [here](https://www.ibm.com/cloud/blog/announcements/whats-new-in-ibm-cloud-databases).
+
 ## 06 October 2021
 {: #databases-for-cassandra-06oct2021}
 {: release-note}
 
 Search Capabilities for Datastax Enterprise
 :  DataStax Enterprise (DSE) is a scale-out NoSQL database built on Apache Cassandra. See blog post announcement [here](https://www.ibm.com/cloud/blog/announcements/announcing-search-capabilities-for-datastax-enterprise).
+
