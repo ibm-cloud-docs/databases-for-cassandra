@@ -33,13 +33,6 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 Search Capabilities for Datastax Enterprise
 :  DataStax Enterprise (DSE) is a scale-out NoSQL database built on Apache Cassandra. See blog post announcement [here](https://www.ibm.com/cloud/blog/announcements/announcing-search-capabilities-for-datastax-enterprise).
 
-## 06 October 2021
-{: #databases-for-cassandra-06oct2021}
-{: release-note}
-
-Search Capabilities for Datastax Enterprise
-:  DataStax Enterprise (DSE) is a scale-out NoSQL database built on Apache Cassandra. See blog post announcement [here](https://www.ibm.com/cloud/blog/announcements/announcing-search-capabilities-for-datastax-enterprise).
-
 ## 17 August 2020
 {: #databases-for-cassandra-17aug2020}
 {: release-note}
