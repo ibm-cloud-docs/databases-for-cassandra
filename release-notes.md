@@ -26,6 +26,13 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.databases-for-cassandra_full}} that are grouped by _date or build number_.
 {: shortdesc}
 
+## 24 November 2021
+{: #databases-for-cassandra-24nov2021}
+{: release-note}
+
+{{site.data.keyword.databases-for-cassandra_full}} 6.7 End of Life in May, 2022
+:  On May 24, 2022, {{site.data.keyword.databases-for-cassandra_full}} version 6.7 reaches its end of life. See blog post announcement [here](https://www.ibm.com/cloud/blog/announcements/databases-for-datastax-6-7-end-of-life-in-may-2022).
+
 ## 15 February 2021
 {: #databases-for-cassandra-15feb2021}
 {: release-note}
