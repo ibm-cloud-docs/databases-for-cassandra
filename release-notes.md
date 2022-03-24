@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2022-03-25"
+lastupdated: "2022-03-24"
 
 keywords: databases-for-cassandra release notes
 
