@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2022-03-23"
+lastupdated: "2022-03-24"
 
 keywords: databases-for-cassandra release notes
 
@@ -30,7 +30,7 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 {: #databases-for-cassandra-15feb2021}
 {: release-note}
 
-{{site.data.keyword.databases-for-cassandra}} Horizontal Scaling
+{{site.data.keyword.databases-for-cassandra_full}} Horizontal Scaling
 :  Customers may scale {{site.data.keyword.databases-for-cassandra_full}} by adding members to their database instance. See blog post announcement [here](https://www.ibm.com/cloud/blog/announcements/whats-new-in-ibm-cloud-databases).
 
 ## 06 October 2021
