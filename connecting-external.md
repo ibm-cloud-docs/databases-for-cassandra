@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-06"
+lastupdated: "2021-11-18"
 
 keywords: drivers, python, java, javascript, certificate, cassandra, datastax, dse
 
@@ -9,9 +9,8 @@ subcollection: databases-for-cassandra
 
 ---
 
-{:new_window: target="_blank"}
+{:external: .external target="_blank"}
 {:shortdesc: .shortdesc}
-{:external .external}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:java: .ph data-hd-programlang='java'}
@@ -33,6 +32,7 @@ Connecting to a {{site.data.keyword.databases-for-cassandra}} deployment:
 - The driver automatically connects to the appropriate endpoint 
 
 ## Connecting with a language's driver
+{: #connecting-lang-driver}
 
  Drivers are a key component to connecting external applications to your {{site.data.keyword.databases-for-cassandra}} deployment. The following table outlines the drivers that are available from DataStax for this type of connection:  
 
@@ -51,10 +51,11 @@ Nodetool, and other drivers that are not explicitly stated in the connection cap
 {: .note}
 
 ## Connecting using CQLSH
+{: #external-cqlsh}
 
 The Cassandra Query Language SHell (CQLSH) is a shell that uses the Cassandra Query Language (CQL) to interact with your database. 
 You can use CQLSH to interact with your database through CQL commands:
-```
+```shell
 ./bin/cqlsh -u username -p password -b /path/to/secure-connectdatabase_name.zip
 ```
 {: pre} 
@@ -66,46 +67,33 @@ See the following DataStax documentation to get started with CQL:
 - [Connecting to databases by using stand-alone CQLSH](https://docs.astra.datastax.com/docs/connecting-to-databases-using-standalone-cqlsh){: external}
 
 ## Connecting with Java
+{: #connecting-java}
 
 Review the GitHub repository for DataStax-Examples specific to [Getting Started with Apache Cassandra and Java using DataStax Astra](https://github.com/DataStax-Examples/getting-started-with-astra-java){: external}
 
 ## Connecting with Python
+{: #connecting-python}
 
 Review the GitHub repository for DataStax-Examples specific to [Getting Started with Apache Cassandra and Python using DataStax Astra](https://github.com/DataStax-Examples/getting-started-with-astra-python){: external}
 
 ## Driver TLS and self-signed certificate support
+{: #driver-tls-cert-support}
 
 All connections to {{site.data.keyword.databases-for-cassandra}} are TLS 1.2 enabled, so the driver you use to connect needs to be able to support encryption. Your deployment also comes with a self-signed certificate (provided in the secure connect bundle downloadable from the [Connections pane](/docs/databases-for-cassandra?topic=databases-for-cassandra-connection-strings)), so the driver can verify the server upon connection. 
 
 ### Using the self-signed certificate
+{: #using-cert}
 
 1. Download the secure connect bundle compressed file from the _Endpoints_ pane of the endpoint information. (You can use the Name that is provided or your own file name).
 2. Provide the path to the compressed file that contains the certificate to the CQLSH command to connect the driver or client: 
 
-   ```
+   ```shell
    ./bin/cqlsh -u admin -p <password> -b /<path_to_secure-connect-bundle.zip>
    ```
    {: .pre}
 
 
 ### CLI plug-in support for the self-signed certificate
+{: #external-app}
 
 You can display the decoded certificate for your deployment with the CLI plug-in with the command `ibmcloud cdb deployment-cacert "your-service-name"`. It decodes the base64 into text. Copy and save the command's output to a file and provide the file's path to the driver.
-
-
-
-
-
-<!-- 
-## Other drivers
-Note that only the Datastax Enterprise (DSE) drivers are supported for use with {{site.data.keyword.databases-for-cassandra_full}}. Use the following information at your own risk:
-{: .note}
-
-DataStax had a vast array of language drivers that are now built in to a single DataStax driver. This new unified driver can also be used to connect to a {{site.data.keyword.databases-for-cassandra}} deployment. This unified DataStax driver is available at the same locations as their existing OSS drivers. Review the following references: 
-
-- [DataStax Downloads](https://downloads.datastax.com/#datastax-apache-cassandra-drivers){: external} for direct links to download locations 
-- [Developing applications with DataStax drivers](https://docs.datastax.com/en/devapp/doc/devapp/aboutDrivers.html){: external} for driver overview details 
-- [DataStax Documentation](https://docs.datastax.com/en/developer/driver-matrix/doc/common/driverMatrix.html){: external} for installation information
-- [Better Drivers for Cassandra](https://www.datastax.com/blog/2020/01/better-drivers-for-cassandra){: external} blog post that details the move to a unified driver. 
--->
-
