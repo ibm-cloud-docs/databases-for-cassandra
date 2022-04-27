@@ -1,8 +1,8 @@
 ---
 
-Copyright:
+copyright:
   years: 2018, 2020
-lastupdated: "2020-08-06"
+lastupdated: "2020-11-18"
 
 keywords: databases, kubernetes, connections, endpoints, cassandra, datastax, dse
 
@@ -10,9 +10,8 @@ subcollection: databases-for-cassandra
 
 ---
 
-{:new_window: target="_blank"}
+{:external: .external target="_blank"}
 {:shortdesc: .shortdesc}
-{:external .external}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
@@ -24,6 +23,7 @@ subcollection: databases-for-cassandra
 Applications running in {{site.data.keyword.cloud_notm}} can be bound to your {{site.data.keyword.databases-for-cassandra_full}} deployment. 
 
 ## Connecting a Kubernetes Service application
+{: #connecting-kubernetes-service-app}
 
 Two steps are required for connecting a Cloud databases deployment to a Kubernetes Service application: 
 - First, your deployment needs a to be bound to your cluster and its connection strings that are stored in a secret. 
@@ -35,6 +35,7 @@ The sample app in the [Connecting a Kubernetes Service Tutorial](/docs/databases
 Before connecting your Kubernetes Service application to a deployment, make sure that the deployment and cluster are both in the same region and resource group.
 
 ### Binding your deployment
+{: #binding-deployment}
 
 **Public Endpoints** -  If you are using the default public service endpoint to connect to your deployment, you can run the `cluster service bind` command with your cluster name, the resource group, and your deployment name.
 ```shell
@@ -44,13 +45,13 @@ ibmcloud ks cluster service bind <your_cluster_name> <resource_group> <your_data
 
 OR
 **Private Endpoints** - If you want to use a private endpoint (if one is enabled on your deployment), then first you need to create a service key for your database so Kubernetes can use it when binding to the database. 
-```
+```shell
 ibmcloud resource service-key-create <your-private-key> --instance-name <your_database_deployment> --service-endpoint private  
 ```
 {: pre}
 
 The private service endpoint is selected with `--service-endpoint private`. After that, you bind the database to the Kubernetes cluster through the private endpoint with the `cluster service bind` command.
-```
+```shell
 ibmcloud ks cluster service bind <your_cluster_name> <resource_group> <your_database_deployment> --key <your-private-key>
 ```
 {: pre}
@@ -64,6 +65,7 @@ kubectl get secrets --namespace=default
 More information on binding services is found in the [Kubernetes Service documentation](/docs/containers?topic=containers-service-binding#bind-services).
 
 ### Configuring in your Kubernetes app 
+{: #config-kubernetes-app}
 
 When you bind your application to Kubernetes Service, it creates an environment variable from the cluster's secrets. Your deployment's connection information lives in `BINDING` as a JSON object. Load and parse the JSON object into your application to retrieve the information your application's driver needs to make a connection to the database. 
 
@@ -72,6 +74,7 @@ The [Connection Strings](/docs/databases-for-cassandra?topic=databases-for-cassa
 More information on the environment variables is in the [Kubernetes Service Docs](https://cloud.ibm.com/docs/containers?topic=containers-service-binding#reference_secret).
 
 ## Connecting a Cloud Foundry application
+{: #connecting-cloud-foundry-app}
 
 There are three steps to connecting a Cloud databases deployment to a Cloud Foundry application: 
 - First, your deployment needs a Cloud Foundry alias. The alias represents the database deployment as a Cloud Foundry service. 
@@ -82,17 +85,18 @@ The sample app in the [Getting Started](/docs/databases-for-cassandra?topic=data
 {: .tip}
 
 ### Creating a Cloud Foundry alias
+{: #creating-cloud-founcry-alias}
 
 Log in to the {{site.data.keyword.cloud_notm}} CLI and use the command:
 
-```
+```shell
 ibmcloud resource service-alias-create alias-name --instance-name instance-name
 ```
 {: pre}
 
 The alias name can be the same as the database service instance name. So, for a {{site.data.keyword.databases-for-cassandra}} service named "example-cassandra", use the following command:
 
-```
+```shell
 ibmcloud resource service-alias-create example-cassandra --instance-name example-cassandra
 ```
 {: pre}
@@ -100,21 +104,22 @@ ibmcloud resource service-alias-create example-cassandra --instance-name example
 The alias appears in the list of _Cloud Foundry Apps_ in your _Resource List_. More information on aliases is available in the [Cloud Foundry documentation](/docs/cloud-foundry-public?topic=cloud-foundry-public-connect_app).
 
 ### Creating the manifest 
+{: #creating-manifest}
 
 Cloud Foundry uses a manifest file - `manifest.yml` to associate an application with another {{site.data.keyword.cloud_notm}} service.
 
 To create the file, open a new file and add the text:
-  ```
-  ---
-  applications:
-  - name:    example-application
-    routes:
-    - route: example-application.us-south.cf.appdomain.cloud
-    memory:  128M
-    services:
-      - example-cassandra
-  ```
-  {: pre}
+   ```shell
+   ---
+   applications:
+   - name:    example-application
+     routes:
+     - route: example-application.us-south.cf.appdomain.cloud
+     memory:  128M
+     services:
+       - example-cassandra
+   ```
+{: pre}
 
 - Change the route value to something unique. The route that you choose determines the subdomain of your application's URL: `<route>.{region}.cf.appdomain.cloud`. Be sure the `{region}` matches where your application is deployed.
 - Change the name value. The value that you choose is the name of the app as it appears in your {{site.data.keyword.cloud_notm}} dashboard.
@@ -127,6 +132,7 @@ You can verify that the services are connected by navigating to the _Connections
 More information on the manifest file is available in the [Cloud Foundry documentation](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps#appmanifest).
 
 ### Configuring in your Cloud Foundry app
+{: #config-cloud-foundry-app}
 
 When you push your application to Cloud Foundry, it generates environment variables for connected services. Your deployment's connection information lives in `VCAP_SERVICES` as a JSON object. Load and parse the JSON object into your application to retrieve the information your application's driver needs to make a connection to the database. 
 
