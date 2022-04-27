@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2017, 2020
-lastupdated: "2020-08-06"
+lastupdated: "2021-11-19"
 
 keywords: databases, cassandra, datastax, dse
 
@@ -9,9 +9,8 @@ subcollection: databases-for-cassandra
 
 ---
 
-{:new_window: target="_blank"}
+{:external: .external target="_blank"}
 {:shortdesc: .shortdesc}
-{:external .external}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
@@ -23,28 +22,28 @@ subcollection: databases-for-cassandra
 
 In order to connect to {{site.data.keyword.databases-for-cassandra_full}}, you need some users and connection strings. Connection Strings for your deployment are displayed on the _Dashboard Overview_, in the _Endpoints_ pane. 
 
-![Endpoints pane on the Dashboard Overview](images/secure-connect-bundle-2.png)
+![Endpoints pane on the Dashboard Overview](images/secure-connect-bundle-2.png){: caption="Figure 1. Endpoints pane" caption-side="bottom"}
 
 A {{site.data.keyword.databases-for-cassandra}} deployment is provisioned with an admin user, and after [setting the admin password](/docs/databases-for-cassandra?topic=databases-for-cassandra-admin-password) you can use its connection strings to connect to your deployment.
 {: tip}
 
-### Client connections
+## Client connections
+{: #client-connection}
+
 Clicking the `Download` button in the Overview tab -> Connections section provides you with a `<formation_id>_<endpoint_type>.zip` file. This compressed file includes:
-  * All necessary Certificates
-  * All necessary JKS/truststore/keystore files so the Java client can connect.
-  * The location of the `host:port` endpoint to access the metadata service.
-
-
+- All necessary Certificates
+- All necessary JKS/truststore/keystore files so the Java client can connect.
+- The location of the `host:port` endpoint to access the metadata service.
 
 An example bundle:
-```
+```shell
 ls src/main/resources/bundle
 ca.crt         cert.pfx       identity.jks   trustStore.jks
 cert           config.json    key
 ```
 
 Example config.json:
-```
+```shell
 cat src/main/resources/bundle/config.json | python3 -m json.tool
 {
   "host": "fd21c05e-28db-4858-9d8f-66651da81d74.bktg0ujl08k42osvn5ig.databases.appdomain.cloud",
@@ -56,16 +55,17 @@ cat src/main/resources/bundle/config.json | python3 -m json.tool
 }
 ```
 
-**CLI** 
+## CLI 
+{: #connection-strings-cli}
 
 You can also grab connection strings from the [CLI](/docs/databases-cli-plugin?topic=databases-cli-plugin-cdb-reference#deployment-connections).
-```
+```shell
 ibmcloud cdb deployment-connections example-deployment -u <newusername> [--endpoint-type <endpoint type>]
 ```
 {: pre}
 
 Full connection information is returned by the `ibmcloud cdb deployment-connections` command with the `--all` flag. To retrieve all the connection information for a deployment named "example-deployment", use the following command.
-```
+```shell
 ibmcloud cdb deployment-connections example-deployment -u <newusername> --all [--endpoint-type <endpoint type>]
 ```
 {: pre}
@@ -75,10 +75,11 @@ If you don't specify a user, the `deployment-connections` commands return inform
 To use the `ibmcloud cdb` CLI commands you must [install the {{site.data.keyword.databases-for}} plugin](/docs/databases-for-mongodb?topic=databases-cli-plugin-cdb-reference#installing-the-cloud-databases-cli-plug-in).
 {: .tip}
 
-**API** 
+## API
+{: #connection-strings-api}
 
 To retrieve user's connection strings from the API, use the [`/users/{userid}/connections`](https://{DomainName}/apidocs/cloud-databases-api#discover-connection-information-for-a-deployment-f-e81026) endpoint. You must specify in the path which user and which type of endpoint (public or private) to use in the returned connection strings. The user and endpoint type is not enforced. You can use any user on your deployment with either endpoint (if both exist on your deployment).
-```
+```shell
 curl -X GET -H "Authorization: Bearer $APIKEY" 'https://api.{region}.databases.cloud.ibm.com/v4/ibm/deployments/{id}/users/{userid}/connections/{endpoint_type}'
 ```
 {: pre}
