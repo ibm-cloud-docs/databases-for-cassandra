@@ -1,9 +1,9 @@
 ---
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-18"
+lastupdated: "2022-05-24"
 
-keywords: drivers, python, java, javascript, certificate, cassandra, datastax, dse
+keywords: drivers, python, java, javascript, certificate, cassandra, datastax, dse, CQLSH
 
 subcollection: databases-for-cassandra
 
@@ -38,11 +38,11 @@ Connecting to a {{site.data.keyword.databases-for-cassandra}} deployment:
 
 DataStax Drivers|{{site.data.keyword.databases-for-cassandra}} connection capable
 ----------|------------
-[C/C++ driver](https://docs.datastax.com/en/developer/cpp-driver-dse/latest){: external}| Yes
-[C# driver](https://docs.datastax.com/en/developer/csharp-driver-dse/latest){: external}| Yes
-[Java driver](https://docs.datastax.com/en/developer/java-driver-dse/latest){: external}| Yes
-[Node.js driver](https://docs.datastax.com/en/developer/nodejs-driver-dse/latest){: external}| Yes
-[Python driver](https://docs.datastax.com/en/developer/python-dse-driver/latest){: external}| Yes
+[`C/C++ driver`](https://docs.datastax.com/en/developer/cpp-driver-dse/latest){: external}| Yes
+[`C# driver`](https://docs.datastax.com/en/developer/csharp-driver-dse/latest){: external}| Yes
+[`Java driver`](https://docs.datastax.com/en/developer/java-driver-dse/latest){: external}| Yes
+[`Node.js driver`](https://docs.datastax.com/en/developer/nodejs-driver-dse/latest){: external}| Yes
+[`Python driver`](https://docs.datastax.com/en/developer/python-dse-driver/latest){: external}| Yes
 {: caption="Table 1. DataStax driver connection information" caption-side="top"}
 
 More details on these drivers, including upgrade guides, can be found on the [Developing applications with Apache Cassandra and DataStax Enterprise](https://docs.datastax.com/en/devapp/doc/devapp/aboutDrivers.html) page. 
@@ -50,7 +50,7 @@ More details on these drivers, including upgrade guides, can be found on the [De
 Nodetool, and other drivers that are not explicitly stated in the connection capable table, are not supported by {{site.data.keyword.databases-for-cassandra}}. Only `Datastax Enterprise (DSE)` drivers are supported for use with {{site.data.keyword.databases-for-cassandra}}. 
 {: .note}
 
-## Connecting using CQLSH
+## Connecting by using CQLSH
 {: #external-cqlsh}
 
 The Cassandra Query Language SHell (CQLSH) is a shell that uses the Cassandra Query Language (CQL) to interact with your database. 
@@ -64,17 +64,17 @@ See the following DataStax documentation to get started with CQL:
 - [Introduction to CQL](https://docs.datastax.com/en/dse/6.7/cql/cql/cql_using/introTOC.html){: external}
 - [CQL quick reference](https://docs.datastax.com/en/dse/6.8/cql/cql/cqlQuickReference.html){: external}
 - [Full CQL shell (cqlsh) command reference](https://docs.datastax.com/en/dse/6.8/cql/cql/cql_reference/cqlsh_commands/cqlshCommandsTOC.html){: external}
-- [Connecting to databases by using stand-alone CQLSH](https://docs.astra.datastax.com/docs/connecting-to-databases-using-standalone-cqlsh){: external}
+- [Connecting to databases by using stand-alone CQLSH](https://support.datastax.com/s/article/How-do-I-connect-to-my-database-using-CQL-shell-CQLSH){: external}
 
 ## Connecting with Java
 {: #connecting-java}
 
-Review the GitHub repository for DataStax-Examples specific to [Getting Started with Apache Cassandra and Java using DataStax Astra](https://github.com/DataStax-Examples/getting-started-with-astra-java){: external}
+Review the GitHub repository for DataStax-Examples specific to [Getting Started with Apache Cassandra and Java by using DataStax Astra](https://github.com/DataStax-Examples/getting-started-with-astra-java){: external}
 
 ## Connecting with Python
 {: #connecting-python}
 
-Review the GitHub repository for DataStax-Examples specific to [Getting Started with Apache Cassandra and Python using DataStax Astra](https://github.com/DataStax-Examples/getting-started-with-astra-python){: external}
+Review the GitHub repository for DataStax-Examples specific to [Getting Started with Apache Cassandra and Python by using DataStax Astra](https://github.com/DataStax-Examples/getting-started-with-astra-python){: external}
 
 ## Driver TLS and self-signed certificate support
 {: #driver-tls-cert-support}
