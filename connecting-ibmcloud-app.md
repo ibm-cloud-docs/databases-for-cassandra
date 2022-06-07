@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2020
-lastupdated: "2020-11-18"
+  years: 2018, 2022
+lastupdated: "2022-06-07"
 
 keywords: databases, kubernetes, connections, endpoints, cassandra, datastax, dse
 
@@ -16,6 +16,8 @@ subcollection: databases-for-cassandra
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:tip: .tip}
+{:deprecated: .deprecated}
+
 
 # Connecting an {{site.data.keyword.cloud_notm}} application
 {: #ibmcloud-app}
@@ -75,6 +77,10 @@ More information on the environment variables is in the [Kubernetes Service Docs
 
 ## Connecting a Cloud Foundry application
 {: #connecting-cloud-foundry-app}
+
+{{site.data.keyword.ibmcf_full}} is deprecated. As of 30 November 2022 new {{site.data.keyword.ibmcf_full}} applications cannot be created and only existing users will be able to deploy applications. End-of-support happens on 1 June 2023. Any instances that still exist on 1 June 2023 will be deleted. For more information, see [Deprecation of IBM Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-deprecation).
+{: deprecated}
+
 
 There are three steps to connecting a Cloud databases deployment to a Cloud Foundry application: 
 - First, your deployment needs a Cloud Foundry alias. The alias represents the database deployment as a Cloud Foundry service. 
