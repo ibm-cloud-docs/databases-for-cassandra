@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2019, 2021
-lastupdated: "2021-12-01"
+  years: 2019, 2022
+lastupdated: "2022-06-29"
 
-keywords: databases, scaling, memory, disk IOPS, CPU, cassandra, datastax, dse
+keywords: databases, scaling, memory, disk IOPS, CPU, cassandra, datastax, dse, datastax dedicated cores, cassandra dedicated cores
 
 subcollection: databases-for-cassandra
 
@@ -33,9 +33,9 @@ Billing is based on the _total_ amount of resources that are allocated to the se
 ### Disk
 {: #resources-scaling-disk}
 
-Your disk allocation must be enough to store all of your data. Your data is replicated to all data members so the total amount of disk you use is at least twice the size of your data set. 
+Your disk allocation must be enough to store all of your data. Your data is replicated to all data members so the total amount of disk that you use is at least twice the size of your data set. 
 
-Disk allocation also affects the performance of the disk, with larger disks experiencing higher performance. Baseline input/output operations per second (IOPS) performance for disk is 10 IOPS for each GB. Scale disk to increase the IOPS your deployment can handle.
+Disk allocation also affects the performance of the disk, with larger disks experiencing higher performance. Baseline input/output operations per second (IOPS) performance for disk is 10 IOPS for each GB. Scale disk to increase the IOPS that your deployment can handle.
 
 You cannot scale down storage.
 {: .tip} 
@@ -48,7 +48,7 @@ If you find that your deployment is suffering from performance issues due to a l
 ### Dedicated Cores
 {: #resources-scaling-dedicated-cores}
 
-You can increase or decrease the CPU shares to the deployment. With dedicated cores, your resource group is given a single-tenant host with a reserve of CPU shares. Your deployment is then guaranteed number of CPUs you specify over the six dedicated cores per member minimum.
+You can increase or decrease the CPU shares to the deployment. With dedicated cores, your resource group is given a single-tenant host with a reserve of CPU shares. Your deployment is then guaranteed a number of CPUs you specify over the six dedicated cores per member, minimum.
 
 ## Scaling Considerations
 {: #resources-scaling-scale-consider}
