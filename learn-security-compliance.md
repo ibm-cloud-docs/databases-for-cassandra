@@ -1,9 +1,9 @@
 ---
 copyright:
-  years: 2018, 2021
-lastupdated: "2021-11-22"
+  years: 2018, 2022
+lastupdated: "2022-06-29"
 
-keywords: databases, soc, hipaa, gdpr, terms, cassandra, datastax, dse
+keywords: databases, soc, hipaa, gdpr, terms, cassandra, datastax, dse, datastax security compliance, datastax dedicated cores
 
 subcollection: databases-for-cassandra
 
@@ -54,7 +54,7 @@ You can request an SOC 2 Type 2 report from the customer portal or contact your 
 ## General Data Protection Regulation (GDPR) 
 {: #security-compliance-gdpr}
 
-If you have an account with IBM Cloud, your personal data is held by {{site.data.keyword.cloud_notm}}. The {{site.data.keyword.IBM_notm}} Data Processing Addendum (Addendum) applies to the processing of client's personal data by {{site.data.keyword.IBM_notm}} on behalf of client in order to provide {{site.data.keyword.IBM_notm}} standard services.  
+If you have an account with IBM Cloud, your personal data is held by {{site.data.keyword.cloud_notm}}. The {{site.data.keyword.IBM_notm}} Data Processing Addendum (Addendum) applies to the processing of client's personal data by {{site.data.keyword.IBM_notm}} on behalf of client to provide {{site.data.keyword.IBM_notm}} standard services.  
 [IBM DPA](https://www.ibm.com/support/customer/zz/en/dpa.html){: external}
 
 {{site.data.keyword.databases-for-cassandra}} processes limited client Personal Information (PI) in the course of running the service and optimizing the user experience. 
