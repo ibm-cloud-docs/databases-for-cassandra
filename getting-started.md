@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-06-16"
+lastupdated: "2022-06-29"
 
-keywords: nodesync, repair, cassandra, datastax, dse
+keywords: nodesync, repair, cassandra, datastax, dse, cassandra external application, nodesync, cassandra migration
 subcollection: databases-for-cassandra
 
 ---
