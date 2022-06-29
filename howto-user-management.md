@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2019, 2020
-lastupdated: "2021-11-22"
+  years: 2019, 2022
+lastupdated: "2022-06-29"
 
-keywords: admin, superuser, roles, service credentials, cassandra, datastax, dse
+keywords: admin, superuser, roles, service credentials, cassandra, datastax, dse, managing datastax, managing cassandra, datastax user
 
 subcollection: databases-for-cassandra
 
@@ -43,13 +43,13 @@ The `ibm` account is the only superuser on your deployment. A superuser account 
 
 Users that you create through the Cloud Databases API and the Cloud Databases CLI are able to log in, create users, and create databases.
 
-Any user created by using the Service Credentials UI, API, or CLI has the same privileges as the admin user. When a user creates a resource in a database, like a table, all users that are in the same group have access to that resource. Resources that are created by any of the users are accessible to other users in the group, including the admin user. 
+Any user who is created by using the Service Credentials UI, API, or CLI has the same privileges as the admin user. When a user creates a resource in a database, like a table, all users that are in the same group have access to that resource. Resources that are created by any of the users are accessible to other users in the group, including the admin user. 
 
-You can build more granular controlled accesses by creating users and roles by using the database functions. This procedure is outlined in the DataStax [Database roles documentation here](https://docs.datastax.com/en/cql-oss/3.3/cql/cql_using/useSecureRoles.html){: external}. 
+By creating users and roles by using the database functions, you can build more granular access. This procedure is outlined in the DataStax [Database roles documentation here](https://docs.datastax.com/en/cql-oss/3.3/cql/cql_using/useSecureRoles.html){: external}. 
 
 Users that are created directly from the API and CLI do not appear in _Service Credentials_, but you can [add them](#creating-users-in-service-credentials) if you choose.
 
-## Additional Users and Connection Strings
+## More Users and Connection Strings
 {: #user-management-add-users-conn-strings}
 
 Access to your {{site.data.keyword.databases-for-cassandra}} deployment is not limited to the admin user. You can create users by using the _Service Credentials_ pane, the {{site.data.keyword.IBM_notm}} CLI, or through the {{site.data.keyword.IBM_notm}} {{site.data.keyword.databases-for}} API. 
@@ -72,7 +72,7 @@ The new credentials appear in the table, and the connection strings are availabl
 
 Service credentials example
 
-```shell
+```sh
 {
   "connection": {
     "secure": {
@@ -113,7 +113,7 @@ Service credentials example
 ```
 
 Command: 
-```shell
+```sh
 echo 'pasted bundle contents' | base64 -D > formation_id_endpoint_type.zip
 ```
 {: pre}
@@ -122,7 +122,7 @@ echo 'pasted bundle contents' | base64 -D > formation_id_endpoint_type.zip
 {: #user-management-create-users-cli}
 
 If you manage your service through the {{site.data.keyword.cloud_notm}} CLI and the [cloud databases plug-in](/docs/cli?topic=cli-install-ibmcloud-cli), you can create a new user with `cdb user-create`. For example, to create a new user for an "example-deployment", use the following command.
-```shell
+```sh
 ibmcloud cdb user-create example-deployment <newusername> <newpassword>
 ```
 {: pre}
@@ -133,7 +133,7 @@ Once the task finishes, you can retrieve the new user's connection strings with 
 {: #user-management-create-users-api}
 
 The _Foundation Endpoint_ that is shown on the _Overview_ pane of your service provides the base URL to access this deployment through the API. To create and manage users, use the base URL with the `/users` endpoint.
-```shell
+```curl
 curl -X POST 'https://api.{region}.databases.cloud.ibm.com/v4/ibm/deployments/{id}/users' \
 -H "Authorization: Bearer $APIKEY" \
 -H "Content-Type: application/json" \
@@ -160,7 +160,7 @@ CQLSH example
 
 Specify the local file path to the `<formation_id>_<endpoint_type>.zip` file that you downloaded from your {{site.data.keyword.databases-for-cassandra}} database Connections pane. See the [Getting Connection Strings](/docs/databases-for-cassandra?topic=databases-for-cassandra-connection-strings) page for more details on downloading the connection bundle.
 
-```shell
+```sh
 ./bin/cqlsh -u username -p password -b /path/to/secure-connect-database_name.zip
 ```
 {: pre}
@@ -171,13 +171,13 @@ Java example
 
 Specify the local file path to the `<formation_id>_<endpoint_type>.zip` file that you downloaded from your {{site.data.keyword.databases-for-cassandra}} database Connections pane. See the [Getting Connection Strings](/docs/databases-for-cassandra?topic=databases-for-cassandra-connection-strings) page for more details on downloading the connection bundle.
 
-```shell
+```sh
 .withCloudSecureConnectBundle(Paths.get(getSecureConnectionBundlePath()))
 ```
 {: pre}
 
 Set the username and password for your {{site.data.keyword.databases-for-cassandra}} database
-```shell
+```sh
 .withAuthCredentials(getUserName(),getPassword())
 ```
 {: pre}
