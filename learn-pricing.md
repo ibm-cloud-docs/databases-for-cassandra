@@ -1,7 +1,7 @@
 ---
 copyright:
-  years: 2017, 2020
-lastupdated: "2021-11-29"
+  years: 2017, 2022
+lastupdated: "2022-06-29"
 
 keywords: databases, pricing, resources, scaling, cassandra, datastax, dse
 
@@ -44,27 +44,27 @@ Resources | Breakdown | Price
 Total per month = $2196.60/Month  
 Total per hour = $2.95/Hour
 
-All prices here are in US dollars. To see pricing in your local currency, you can to use the pricing calculator.
+All prices here are in US dollars. To see pricing in your local currency, you can use the pricing calculator.
 {: .tip}
 
 ## Using the Pricing Calculator
 {: #pricing-calc}
 
-Templates are provided for ease of use and provide balanced resource allocations appropriate for general purpose workloads. The **Custom** tab can be used to configure Disk, RAM, and vCPU, as desired.
+Templates are provided for ease of use and provide balanced resource allocations appropriate for general-purpose workloads. The **Custom** tab can be used to configure Disk, RAM, and vCPU, as wanted.
 
-For pricing estimation, click **Add to Estimate** on the [{{site.data.keyword.databases-for-cassandra}} catalog page](https://cloud.ibm.com/catalog/databases-for-cassandra). Input your total consumption across three data members into the calculator. This is roughly tripled the size of your data because your data is replicated to all three members. For example, 20 GB of disk and 12 GB of RAM across three data members would be priced at 60 GB of disk and 36 GB of RAM respectively. 
+For pricing estimation, click **Add to Estimate** on the [{{site.data.keyword.databases-for-cassandra}} catalog page](https://cloud.ibm.com/catalog/databases-for-cassandra). Input your total consumption across three data members into the calculator. This is roughly tripled the size of your data because your data is replicated to all three members. For example, 20 GB of disk and 12 GB of RAM across three data members would be priced at 60 GB of disk and 36 GB of RAM. 
 
 ![Pricing calculator estimation with 20 GB of disk and 12 GB of RAM, per member](images/pricing-estimate.png){: caption="Figure 2. Pricing calculator estimation" caption-side="bottom"}
 
 ## Backups Pricing
 {: #pricing-backup}
 
-Users also receive their total disk space purchased, per database, in free backup storage. For example, in a specific month, if you have a {{site.data.keyword.databases-for-cassandra}} deployment that has 20 GB of disk per member, and has three data members, you receive 60 GB of backup storage free for that month. If your backup storage utilization is greater than 60 GB for the month in this scenario, each gigabyte is charged at an overage $0.03/month. Most deployments will not exceed the allotted credit.
+Users also receive their total disk space purchased, per database, in free backup storage. For example, in a specific month, if you have a {{site.data.keyword.databases-for-cassandra}} deployment that has 20 GB of disk per member, and three data members, you receive 60 GB of backup storage free for that month. If your backup storage utilization is greater than 60 GB for the month in this scenario, each gigabyte is charged at an overage $0.03/month. Most deployments will not exceed the allotted credit.
 
 ## Dedicated Cores Pricing
 {: #pricing-cores}
 
-You have the option of selecting the CPU allocation for your deployment. With dedicated cores, your resource group is given a single-tenant host with a guaranteed minimum reserve of cpu shares. Your deployments are then allocated the number of CPUs you specify. The cost of dedicated cores is $100 per core per month, and each member gets the selected number of cores. For example, if you provision a deployment with 6 dedicated cores per member, that is a total of 18 cores, and billed at $1,800 per month. 
+You have the option of selecting the CPU allocation for your deployment. With dedicated cores, your resource group is given a single-tenant host with a guaranteed minimum reserve of cpu shares. Your deployments are then allocated the number of CPUs you specify. The cost of dedicated cores is $100 per core per month, and each member gets the selected number of cores. For example, if you provision a deployment with six dedicated cores per member, that is a total of 18 cores, and billed at $1,800 per month. 
 
 Dedicated cores are an optional feature.{: .note}
 
