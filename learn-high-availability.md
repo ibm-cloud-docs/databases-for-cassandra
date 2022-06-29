@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2018, 2021
-lastupdated: "2021-11-22"
+  years: 2018, 2022
+lastupdated: "2022-06-29"
 
-keywords: databases, connection limits, cassandra, datastax, dse
+keywords: databases, connection limits, cassandra, datastax, dse, datastax replication, datastax high availability
 
 subcollection: databases-for-cassandra
 
@@ -39,10 +39,10 @@ Several minutes of database unavailability or connection interruption are not ex
 ## Replication, keystores, and High-Availability
 {: #repl-keys-high-availability}
 
-When you create the keyspace it is up to you to define the number of replicas and strategy. Setting the value to `NetworkTopologyStrategy` and number of replicas matching your deployment, the distribution across zones occur automatically (except within single zone regions like Chennai, Oslo, Seoul where replication is contained to that single zone). You can read more about the [replication strategies](https://docs.datastax.com/en/dse/6.0/dse-arch/datastax_enterprise/dbArch/archDataDistributeReplication.html) in the DataStax Enterprise documentation.
+When you create the keyspace, it is up to you to define the number of replicas and strategy. Setting the value to `NetworkTopologyStrategy` and number of replicas matching your deployment, the distribution across zones occur automatically (except within single zone regions like Chennai, Oslo, Seoul where replication is contained to that single zone). You can read more about the [replication strategies](https://docs.datastax.com/en/dse/6.0/dse-arch/datastax_enterprise/dbArch/archDataDistributeReplication.html) in the DataStax Enterprise documentation.
 
-To help ensure availability of data, setting the replication factor that matches your deployment is necessary. When you create keyspaces, make sure to set the replication factor to the number of nodes (or members) in your cluster. The following example shows this set to 3, where `eu-gb` is the region set based on the location of the formation in the CRN: 
-```shell
+To help ensure availability of data, setting the replication factor that matches your deployment is necessary. When you create key spaces, make sure to set the replication factor to the number of nodes (or members) in your cluster. The following example shows this set to 3, where `eu-gb` is the region set based on the location of the formation in the CRN: 
+```sh
 create keyspace if not exists ibm with replication = {'class' : 'NetworkTopologyStrategy', 'eu-gb' : 3};
 ```
 {: pre} 
