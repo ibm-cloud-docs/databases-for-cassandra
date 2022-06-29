@@ -1,9 +1,9 @@
 ---
 copyright:
-  years: 2017, 2021
-lastupdated: "2022-05-24"
+  years: 2017, 2022
+lastupdated: "2022-06-29"
 
-keywords: drivers, python, java, javascript, certificate, cassandra, datastax, dse, CQLSH
+keywords: drivers, python, java, javascript, certificate, cassandra, datastax, dse, CQLSH, cassandra connection strings, dse connection strings, cassandra query
 
 subcollection: databases-for-cassandra
 
@@ -55,7 +55,7 @@ Nodetool, and other drivers that are not explicitly stated in the connection cap
 
 The Cassandra Query Language SHell (CQLSH) is a shell that uses the Cassandra Query Language (CQL) to interact with your database. 
 You can use CQLSH to interact with your database through CQL commands:
-```shell
+```sh
 ./bin/cqlsh -u username -p password -b /path/to/secure-connectdatabase_name.zip
 ```
 {: pre} 
@@ -87,7 +87,7 @@ All connections to {{site.data.keyword.databases-for-cassandra}} are TLS 1.2 ena
 1. Download the secure connect bundle compressed file from the _Endpoints_ pane of the endpoint information. (You can use the Name that is provided or your own file name).
 2. Provide the path to the compressed file that contains the certificate to the CQLSH command to connect the driver or client: 
 
-   ```shell
+   ```sh
    ./bin/cqlsh -u admin -p <password> -b /<path_to_secure-connect-bundle.zip>
    ```
    {: .pre}
