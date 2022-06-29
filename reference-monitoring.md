@@ -1,9 +1,9 @@
 ---
 copyright:
-  years: 2020, 2021
-lastupdated: "2021-11-22"
+  years: 2020, 2022
+lastupdated: "2022-06-29"
 
-keywords: monitoring, metrics, iops, disk usage, memory usage, connection usage, cassandra, datastax, dse
+keywords: monitoring, metrics, iops, disk usage, memory usage, connection usage, cassandra, datastax, dse, datastax i/o, cassandra i/o
 
 subcollection: databases-for-cassandra
 
@@ -232,7 +232,7 @@ How much memory your deployment is using.
 ### Used JVM heap percent 
 {: #ibm_databases_for_cassandra_jvm_heap_percent}
 
-How much Java Virtual Machine (JVM) heap memory your deployment is using.
+How much Java virtual machine (JVM) heap memory your deployment is using.
 
 | Metadata | Description |
 |----------|-------------|
@@ -272,12 +272,12 @@ The following attributes are available for segmenting all of the metrics listed.
 | `Scope` | `ibm_scope` | The scope is the account, organization, or space GUID associated with this metric. |
 {: caption="Table 17. Global Attributes Metadata" caption-side="top"}
 
-### Additional Attributes
+### More Attributes
 {: #additional-attributes}
 
 | Attribute | Attribute Name | Attribute Description |
 |-----------|----------------|-----------------------|
 | `Service instance` | `ibm_service_instance` | The service instance segment identifies the instance the metric is associated with. |
-| `Service instance name` | `ibm_service_instance_name` | The service instance name provides the user-provided name of the service instance, which isn't necessarily a unique value depending on the name provided by the user.|
+| `Service instance name` | `ibm_service_instance_name` | The service instance name provides the user-provided name of the service instance, which isn't necessarily a unique value depending on the name that is provided by the user.|
 | `Resource group` | `ibm_resource_group_name` | The resource group where the service instance was created. |
 {: caption="Table 18. Additional Attributes Metadata" caption-side="top"}
