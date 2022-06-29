@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2021-11-22"
+  years: 2020, 2022
+lastupdated: "2022-06-29"
 
 keywords: troubleshooting for Datastax, cassandra, datastax, dse
 
