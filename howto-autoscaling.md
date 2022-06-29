@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2020, 2021
-lastupdated: "2021-12-01"
+  years: 2020, 2022
+lastupdated: "2022-06-29"
 
-keywords: databases, scaling, autoscaling, memory, disk I/O, cassandra, datastax, dse
+keywords: databases, scaling, autoscaling, memory, disk I/O, cassandra, datastax, dse, datastax autoscaling, cassandra autoscaling
 
 subcollection: databases-for-cassandra
 
@@ -42,7 +42,7 @@ The resource numbers refer to each database member (or node) in a deployment. Fo
 ## Autoscaling Considerations
 {: #autoscaling-consider}
 
-- Scaling your deployment up might cause your databases to restart. If your deployment needs to be moved to a host with more capacity, then the databases are restarted as part of the move.
+Scaling your deployment up might cause your databases to restart. If your deployment needs to be moved to a host with more capacity, then the databases are restarted as part of the move.
 
 - Disk cannot be scaled down.
 
@@ -76,7 +76,7 @@ ibmcloud cdb deployment-autoscaling <deployment name or CRN> member
 {: pre}
 
 To enable and set autoscaling parameters through the CLI, use a JSON object or file with the [`cdb deployment-autoscaling-set`](/docs/databases-cli-plugin?topic=databases-cli-plugin-cdb-reference#-ibmcloud-cdb-deployment-autoscaling-set-) command.
-```shell
+```sh
 ibmcloud cdb deployment-autoscaling-set <deployment name or CRN> member '{"autoscaling": { "memory": {"scalers": {"io_utilization": {"enabled": true, "over_period": "5m","above_percent": 90}},"rate": {"increase_percent": 10.0, "period_seconds": 300,"limit_mb_per_member": 125952,"units": "mb"}}}}'
 ```
 {: pre}
