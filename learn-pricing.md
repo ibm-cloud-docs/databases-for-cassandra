@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-29"
+lastupdated: "2022-07-25"
 
 keywords: databases, pricing, resources, scaling, cassandra, datastax, dse
 
@@ -33,13 +33,13 @@ A {{site.data.keyword.databases-for-cassandra_full}} Standard plan deploys as on
 
 ![Standard pricing](images/standard-pricing.png){: caption="Figure 1. Pricing calculator estimation" caption-side="bottom"}
 
-Resources | Breakdown | Price
--------|-------|-------
-20 GB-Month disk | 3 members x 20 GB x $0.58 | $34.80
-20 GB-Month backup| 3 members x 20 GB x $0.03| $1.80
-12 GB-Month RAM | 3 members x 12 GB x $10.00 | $360.00
-6 Virtual processor Cores | 3 members x 6 cores x $100 | $1800
-{: caption="Table 1. Pricing example for two data members" caption-side="top"}{: caption="Table 1. Pricing example" caption-side="bottom"}
+| Resources | Breakdown | Price |
+| ------- | ------- | ------- |
+| 20 GB-Month disk | 3 members x 20 GB x $0.58 | $34.80 |
+| 20 GB-Month backup| 3 members x 20 GB x $0.03| $1.80 |
+| 12 GB-Month RAM | 3 members x 12 GB x $10.00 | $360.00 |
+| 6 Virtual processor Cores | 3 members x 6 cores x $100 | $1800 |
+{: caption="Table 1. Pricing example for two data members" caption-side="top"}
 
 Total per month = $2196.60/Month  
 Total per hour = $2.95/Hour
@@ -73,9 +73,9 @@ Dedicated cores are an optional feature.{: .note}
 
 {{site.data.keyword.databases-for-cassandra}} deployments have minimum and maximum allocation for disk and RAM as shown. Scaling deployments through the API/CLI provides more granularity and also allows a user to scale a database instance up to 4 TB of disk per member.
 
-Resource | Minimum | Maximum | Scaling Granularity (API/CLI)
-----------|-----|-----|-------
-Disk | 20 GB per member | 4 TB per member | 1024 MB per member
-RAM | 12 GB per member | 112 GB per member | 128 MB per member
-CPU (if enabled) | 6 CPUs per member | 28 CPUs per member| 1 CPU per member
+| Resource | Minimum | Maximum | Scaling Granularity (API/CLI) |
+| ---------- | ----- | ----- | ------- |
+| Disk | 20 GB per member | 4 TB per member | 1024 MB per member |
+| RAM | 12 GB per member | 112 GB per member | 128 MB per member |
+| CPU (if enabled) | 6 CPUs per member | 28 CPUs per member| 1 CPU per member |
 {: caption="Table 2. Per Member Scaling Limits" caption-side="top"}
