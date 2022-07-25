@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-29"
+lastupdated: "2022-07-25"
 
 keywords: drivers, python, java, javascript, certificate, cassandra, datastax, dse, CQLSH, cassandra connection strings, dse connection strings, cassandra query
 
@@ -36,13 +36,13 @@ Connecting to a {{site.data.keyword.databases-for-cassandra}} deployment:
 
  Drivers are a key component to connecting external applications to your {{site.data.keyword.databases-for-cassandra}} deployment. The following table outlines the drivers that are available from DataStax for this type of connection:  
 
-DataStax Drivers|{{site.data.keyword.databases-for-cassandra}} connection capable
-----------|------------
-[`C/C++ driver`](https://docs.datastax.com/en/developer/cpp-driver-dse/latest){: external}| Yes
-[`C# driver`](https://docs.datastax.com/en/developer/csharp-driver-dse/latest){: external}| Yes
-[`Java driver`](https://docs.datastax.com/en/developer/java-driver-dse/latest){: external}| Yes
-[`Node.js driver`](https://docs.datastax.com/en/developer/nodejs-driver-dse/latest){: external}| Yes
-[`Python driver`](https://docs.datastax.com/en/developer/python-dse-driver/latest){: external}| Yes
+| DataStax Drivers|{{site.data.keyword.databases-for-cassandra}} connection capable | 
+| ---------- | ------------ | 
+| [`C/C++ driver`](https://docs.datastax.com/en/developer/cpp-driver-dse/latest){: external}| Yes | 
+| [`C# driver`](https://docs.datastax.com/en/developer/csharp-driver-dse/latest){: external}| Yes | 
+| [`Java driver`](https://docs.datastax.com/en/developer/java-driver-dse/latest){: external}| Yes | 
+| [`Node.js driver`](https://docs.datastax.com/en/developer/nodejs-driver-dse/latest){: external}| Yes | 
+| [`Python driver`](https://docs.datastax.com/en/developer/python-dse-driver/latest){: external}| Yes | 
 {: caption="Table 1. DataStax driver connection information" caption-side="top"}
 
 More details on these drivers, including upgrade guides, can be found on the [Developing applications with Apache Cassandra and DataStax Enterprise](https://docs.datastax.com/en/devapp/doc/devapp/aboutDrivers.html) page. 
