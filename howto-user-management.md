@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-06-29"
+lastupdated: "2022-08-18"
 
 keywords: admin, superuser, roles, service credentials, cassandra, datastax, dse, managing datastax, managing cassandra, datastax user
 
@@ -118,10 +118,10 @@ echo 'pasted bundle contents' | base64 -D > formation_id_endpoint_type.zip
 ```
 {: pre}
 
-### Creating Users from the command line
+### Creating Users from the {{site.data.keyword.cloud_notm}} CLI
 {: #user-management-create-users-cli}
 
-If you manage your service through the {{site.data.keyword.cloud_notm}} CLI and the [cloud databases plug-in](/docs/cli?topic=cli-install-ibmcloud-cli), you can create a new user with `cdb user-create`. For example, to create a new user for an "example-deployment", use the following command.
+To manage your service through the {{site.data.keyword.cloud_notm}} CLI and the [Cloud Databases plug-in](/docs/cli?topic=cli-install-ibmcloud-cli), create a new user with `cdb user-create`. For example, to create a new user for an "example-deployment", use the following command.
 ```sh
 ibmcloud cdb user-create example-deployment <newusername> <newpassword>
 ```
@@ -146,7 +146,7 @@ Once the task finishes, you can retrieve the new user's connection strings, from
 ### Adding users to _Service Credentials_
 {: #user-management-add-users-serve-cred}
 
-Creating a new user from the CLI doesn't automatically populate that user's connection strings into _Service Credentials_. If you want to add them there, you can create a new credential with the existing user information.
+Creating a new user from the CLI doesn't automatically populate that user's connection strings into _Service Credentials_. To add them there, create a new credential with the existing user information.
 
 Enter the username and password in the JSON field _Add Inline Configuration Parameters_, or specify a file where the JSON information is stored. For example, putting `{"existing_credentials":{"username":"Robert","password":"supersecure"}}` in the field generates _Service Credentials_ with the username "Robert" and password "supersecure" filled into connection strings.
 
@@ -156,9 +156,10 @@ Generating credentials from an existing user does not check for or create that u
 ### The CLI Section
 {: #user-management-cli-section}
 
-CQLSH example
+#### CQLSH example
+{: #user-management-cqlsh-example}
 
-Specify the local file path to the `<formation_id>_<endpoint_type>.zip` file that you downloaded from your {{site.data.keyword.databases-for-cassandra}} database Connections pane. See the [Getting Connection Strings](/docs/databases-for-cassandra?topic=databases-for-cassandra-connection-strings) page for more details on downloading the connection bundle.
+Specify the local file path to the `<formation_id>_<endpoint_type>.zip` file that you downloaded from your {{site.data.keyword.databases-for-cassandra}} Connections pane. For more information, see [Getting Connection Strings](/docs/databases-for-cassandra?topic=databases-for-cassandra-connection-strings).
 
 ```sh
 ./bin/cqlsh -u username -p password -b /path/to/secure-connect-database_name.zip
@@ -167,9 +168,10 @@ Specify the local file path to the `<formation_id>_<endpoint_type>.zip` file tha
 
 More details on connecting with CQLSH are in the [DataStax documentation](https://docs.datastax.com/en/dse/6.8/cql/cql/cql_using/startCqlshStandalone.html){: external}. 
 
-Java example
+#### Java example
+{: #user-management-java-example}
 
-Specify the local file path to the `<formation_id>_<endpoint_type>.zip` file that you downloaded from your {{site.data.keyword.databases-for-cassandra}} database Connections pane. See the [Getting Connection Strings](/docs/databases-for-cassandra?topic=databases-for-cassandra-connection-strings) page for more details on downloading the connection bundle.
+Specify the local file path to the `<formation_id>_<endpoint_type>.zip` file that you downloaded from your {{site.data.keyword.databases-for-cassandra}} Connections pane. For more imformation, see [Getting Connection Strings](/docs/databases-for-cassandra?topic=databases-for-cassandra-connection-strings).
 
 ```sh
 .withCloudSecureConnectBundle(Paths.get(getSecureConnectionBundlePath()))
@@ -182,4 +184,4 @@ Set the username and password for your {{site.data.keyword.databases-for-cassand
 ```
 {: pre}
 
-More details on connecting with the Java driver are in the [DataStax documentation](https://docs.datastax.com/en/developer/java-driver-dse/2.3/manual/cloud/){: external}
+For more information, see the [DataStax documentation](https://docs.datastax.com/en/developer/java-driver-dse/2.3/manual/cloud/){: external}.
