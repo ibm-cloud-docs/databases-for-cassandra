@@ -1,9 +1,9 @@
 ---
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-25"
+lastupdated: "2022-09-14"
 
-keywords: databases, pricing, resources, scaling, cassandra, datastax, dse
+keywords: databases, pricing, resources, scaling, cassandra, datastax, dse, backup pricing, cassandra pricing, datastax pricing
 
 subcollection: databases-for-cassandra
 
@@ -52,14 +52,22 @@ All prices here are in US dollars. To see pricing in your local currency, you ca
 
 Templates are provided for ease of use and provide balanced resource allocations appropriate for general-purpose workloads. The **Custom** tab can be used to configure Disk, RAM, and vCPU, as wanted.
 
-For pricing estimation, click **Add to Estimate** on the [{{site.data.keyword.databases-for-cassandra}} catalog page](https://cloud.ibm.com/catalog/databases-for-cassandra). Input your total consumption across three data members into the calculator. This is roughly tripled the size of your data because your data is replicated to all three members. For example, 20 GB of disk and 12 GB of RAM across three data members would be priced at 60 GB of disk and 36 GB of RAM. 
+For pricing estimation, click **Add to Estimate** on the [{{site.data.keyword.databases-for-cassandra}} catalog page](https://cloud.ibm.com/catalog/databases-for-cassandra). Input your total consumption across three data members into the calculator. This is roughly tripled the size of your data because the data is replicated to all three members. For example, 20 GB of disk and 12 GB of RAM across three data members would be priced at 60 GB of disk and 36 GB of RAM. 
 
 ![Pricing calculator estimation with 20 GB of disk and 12 GB of RAM, per member](images/pricing-estimate.png){: caption="Figure 2. Pricing calculator estimation" caption-side="bottom"}
 
 ## Backups Pricing
 {: #pricing-backup}
 
-Users also receive their total disk space purchased, per database, in free backup storage. For example, in a specific month, if you have a {{site.data.keyword.databases-for-cassandra}} deployment that has 20 GB of disk per member, and three data members, you receive 60 GB of backup storage free for that month. If your backup storage utilization is greater than 60 GB for the month in this scenario, each gigabyte is charged at an overage $0.03/month. Most deployments will not exceed the allotted credit.
+Your receive your total disk space purchased, per database, in free backup storage. For example, in a given month, if you have a {{site.data.keyword.databases-for-cassandra}} deployment that has 20 GB of disk per member, and has three data members, you receive 60 GB of backup storage free for that month. If your backup storage utilization is greater than 60 GB for the month (in this scenario), you are charged an overage of $0.03/month per gigabyte. 
+
+By default, {{site.data.keyword.databases-for}} provides a daily backup that is stored for 30 days. These backups, and any on-demand backups you make, all count toward the above allocation.
+
+In the above example, if your database contains 2 GB of data and you have not taken any on-demand backups, then your total backup size is 2 GB x 30 = 60 GB. Your backup costs are nil.
+
+If your database contains 15 GB of data and you have not taken any on-demand backups, then your total backup size is 15 GB x 30 = 450 GB. In this scenario, your backup costs are (450 GB - 60 GB) * 0.03 = $11.7 per month.
+
+Most deployments will not ever go over the allotted credit.
 
 ## Dedicated Cores Pricing
 {: #pricing-cores}
