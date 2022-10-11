@@ -35,6 +35,7 @@ toc:
       - howto-admin-password.md
       - howto-getting-connection-strings.md
       - /cloud-databases/cloud-databases-provisioning
+      - /cloud-databases/cloud-databases-cbr
       - /cloud-databases/cloud-databases-deprovisioning
       - /cloud-databases/cloud-databases-migrate-data-center
       - /cloud-databases/cloud-databases-ha-dr
