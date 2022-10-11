@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-04-01"
+lastupdated: "2022-10-10"
 
 keywords: databases-for-cassandra release notes
 
@@ -19,6 +19,13 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.databases-for-cassandra_full}} that are grouped by _date or build number_.
 {: shortdesc}
+
+## 10 October 2022
+{: #databases-for-cassandra-10oct2022}
+{: release-note}
+
+Protecting {{site.data.keyword.databases-for-cassandra_full}} resources with context-based restrictions
+:  Context-based restrictions (CBR) give account owners and administrators the ability to define and enforce access restrictions for {{site.data.keyword.cloud}} resources based on the context of access requests. Access to {{site.data.keyword.databases-for}} resources can be controlled with CBR and identity and access management (IAM) policies. For more information, see [Protecting Cloud Databases resources with context-based restrictions](/docs/databases-for-cassandra?topic=cloud-databases-cbr).
 
 ## 24 November 2021
 {: #databases-for-cassandra-24nov2021}
