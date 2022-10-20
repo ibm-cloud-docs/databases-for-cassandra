@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-06-29"
+lastupdated: "2022-10-20"
 
 keywords: databases, scaling, memory, disk IOPS, CPU, cassandra, datastax, dse, datastax dedicated cores, cassandra dedicated cores
 
@@ -16,6 +16,7 @@ subcollection: databases-for-cassandra
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:tip: .tip}
+{{site.data.keyword.attribute-definition-list}}
 
 # Scaling Disk, RAM, and CPU
 {: #resources-scaling}
@@ -69,6 +70,7 @@ You can increase or decrease the CPU shares to the deployment. With dedicated co
 
 ## Scaling in the UI
 {: #resources-scaling-ui}
+{: ui}
 
 A visual representation of your data members and their resource allocation is available on the _Resources_ tab of your deployment's _Manage_ page. 
 
@@ -81,17 +83,18 @@ The UI currently uses a coarser-grained resolution for scaling than the CLI or A
 
 ## Scaling in the CLI 
 {: #resources-scaling-cli}
+{: cli}
 
 [{{site.data.keyword.cloud_notm}} CLI cloud databases plug-in](/docs/databases-cli-plugin?topic=databases-cli-plugin-cdb-reference) supports viewing and scaling the resources on your deployment. To scale any of the available resource groups, use `cdb deployment-groups-set` command. 
 
 For example, the command to view the resource groups for a deployment named "example-deployment" is, 
-```shell
+```sh
 ibmcloud cdb deployment-groups example-deployment
 ```
 {: pre}
 
 This command produces the output,
-```shell
+```sh
 Group   member
 Count   3
 |
@@ -120,24 +123,25 @@ Count   3
 The deployment has three members, with 36864 MB of RAM and 61440 MB of disk allocated in total. The "per member" allocation is 12288 MB of RAM and 20480 MB of disk. The minimum value is the lowest the total allocation that can be set. The step size is the smallest amount by which the total allocation can be adjusted.
 
 The `cdb deployment-groups-set` command allows either the total RAM or total disk allocation to be set, in MB. For example, to scale the memory of the "example-deployment" to 13312 MB of RAM for each memory member (for a total memory of 39936 MB), you use the command 
-```shell
+```sh
 ibmcloud cdb deployment-groups-set example-deployment member --memory 39936
 ```
 {: pre}
 
 ## Scaling in the API
 {: #resources-scaling-api}
+{: api}
 
 The _Foundation Endpoint_ that is shown on the _Overview_ pane of your service provides the base URL to access this deployment through the API. Use it with the `/groups` endpoint if you need to manage or automate scaling programmatically. 
 
 To view the current and scalable resources on a deployment, use
-```curl
+```sh
 curl -X GET -H "Authorization: Bearer $APIKEY" 'https://api.{region}.databases.cloud.ibm.com/v4/ibm/deployments/{id}/groups'
 ```
 {: pre}
 
 To scale the memory of a deployment to 13312 MB of RAM for each memory member (for a total memory of 39936 MB).
-```curl
+```sh
 curl -X PATCH 'https://api.{region}.databases.cloud.ibm.com/v4/ibm/deployments/{id}/groups/member' \
 -H "Authorization: Bearer $APIKEY" \
 -H "Content-Type: application/json" \
@@ -149,5 +153,3 @@ curl -X PATCH 'https://api.{region}.databases.cloud.ibm.com/v4/ibm/deployments/{
 {: pre}
 
 More information is in the [API Reference](https://{DomainName}/apidocs/cloud-databases-api#get-currently-available-scaling-groups-from-a-depl).
-
- 
