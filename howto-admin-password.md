@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2020, 2022
-lastupdated: "2022-06-29"
+lastupdated: "2022-10-20"
 
 keywords: admin password, credentials, cassandra, datastax admin password, dse
 
@@ -27,6 +27,7 @@ You must set the admin password before you can use it to connect. To set the pas
 
 ## Setting the admin password via the command line
 {: #admin-password-cli}
+{: cli}
 
 Use the `cdb user-password` command from the [{{site.data.keyword.databases-for-cassandra}} CLI plug-in](/docs/databases-cli-plugin?topic=databases-cli-plugin-cdb-reference) to set the admin password with the command line.
 
@@ -38,6 +39,7 @@ ibmcloud cdb user-password example-deployment admin <newpassword>
 
 ## Setting the admin password via the API
 {: #admin-password-api}
+{: api}
 
 The _Foundation Endpoint_ that is shown on the _Overview_ pane of your service provides the base URL to access this deployment through the API. Use it with the `/deployments/{id}/users/{username}` endpoint to set the admin password.
 
