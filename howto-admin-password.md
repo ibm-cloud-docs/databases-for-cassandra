@@ -15,6 +15,7 @@ subcollection: databases-for-cassandra
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:tip: .tip}
+{{site.data.keyword.attribute-definition-list}}
 
 # Setting the Admin Password
 {: #admin-password}
