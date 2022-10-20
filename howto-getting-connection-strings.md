@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-29"
+lastupdated: "2022-10-20"
 
 keywords: databases, cassandra, datastax, dse, cassandra connection strings, datastax connection strings
 
@@ -15,7 +15,7 @@ subcollection: databases-for-cassandra
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:tip: .tip}
-
+{{site.data.keyword.attribute-definition-list}}
 
 # Getting Connection Strings
 {: #connection-strings}
@@ -55,8 +55,9 @@ cat src/main/resources/bundle/config.json | python3 -m json.tool
 }
 ```
 
-## CLI 
+## Getting Connection Strings through the CLI 
 {: #connection-strings-cli}
+{: cli}
 
 You can also grab connection strings from the [CLI](/docs/databases-cli-plugin?topic=databases-cli-plugin-cdb-reference#deployment-connections).
 ```sh
@@ -75,8 +76,9 @@ If you don't specify a user, the `deployment-connections` commands return inform
 To use the `ibmcloud cdb` CLI commands, [install the {{site.data.keyword.databases-for}} plug-in](/docs/databases-for-mongodb?topic=databases-cli-plugin-cdb-reference#installing-the-cloud-databases-cli-plug-in).
 {: .tip}
 
-## API
+## Getting Connection Strings through the API
 {: #connection-strings-api}
+{: api}
 
 To retrieve user's connection strings from the API, use the [`/users/{userid}/connections`](https://{DomainName}/apidocs/cloud-databases-api#discover-connection-information-for-a-deployment-f-e81026) endpoint. You must specify in the path which user and which type of endpoint (public or private) to use in the returned connection strings. The user and endpoint type is not enforced. You can use any user on your deployment with either endpoint (if both exist on your deployment).
 ```sh
