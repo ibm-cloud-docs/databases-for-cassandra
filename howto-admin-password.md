@@ -22,11 +22,11 @@ subcollection: databases-for-cassandra
 
 The {{site.data.keyword.databases-for-cassandra}} service is provisioned with an admin user.
 
-You must set the admin password before you can use it to connect. To set the password through the {{site.data.keyword.cloud_notm}} dashboard, select _Manage_ from the service dashboard to open the management pane for your service. Open the _Settings_ tab, and use the _Change Database Admin Password_ pane to set a new admin password.
+You must set the admin password before you use it to connect. To set the password through the {{site.data.keyword.cloud_notm}} dashboard, select _Manage_ from the service dashboard to open the management pane for your service. Open the _Settings_ tab, and use the _Change Database Admin Password_ pane to set a new admin password.
 
 ![The Change Database Admin Password pane in _Settings_](images/settings-admin-password.png){: caption="Figure 1. The Change Database Admin Password pane" caption-side="bottom"}
 
-## Setting the admin password via the command line
+## Setting the admin password through the command line
 {: #admin-password-cli}
 {: cli}
 
@@ -38,7 +38,7 @@ ibmcloud cdb user-password example-deployment admin <newpassword>
 ```
 {: pre}
 
-## Setting the admin password via the API
+## Setting the admin password through the API
 {: #admin-password-api}
 {: api}
 
