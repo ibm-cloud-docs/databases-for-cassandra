@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-08-18"
+lastupdated: "2022-10-21"
 
 keywords: admin, superuser, roles, service credentials, cassandra, datastax, dse, managing datastax, managing cassandra, datastax user
 
@@ -16,9 +16,9 @@ subcollection: databases-for-cassandra
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{{site.data.keyword.attribute-definition-list}}
 
-
-# Creating and managing users, roles, and privileges 
+# Creating and managing users, roles, and privileges
 {: #user-management}
 
 {{site.data.keyword.databases-for-cassandra_full}} uses a system of roles to manage database permissions. Roles are used to give a single user or a group of users a set of privileges. 
@@ -35,7 +35,7 @@ When you provision a new deployment in {{site.data.keyword.cloud_notm}}, you are
 ## The `ibm` User
 {: #user-management-ibm}
 
-If you use the shell to list the users on your deployment, you might notice a user that is named `ibm`. 
+If you use the shell to list the users on your deployment, you might notice a user that is named `ibm`.
 The `ibm` account is the only superuser on your deployment. A superuser account is not available for you to use. This user is an internal administrative account that manages replication, metrics, and other functions to ensure the stability of your deployment. Changing or deleting to the `ibm` user is not advised as it disrupts the stability of your deployment.
 
 ## Users who are created through the CLI and the API
@@ -60,6 +60,7 @@ When you create a user, it is assigned certain database roles and privileges. Th
 
 ### Creating Users in _Service Credentials_
 {: #creating-users-in-service-credentials}
+{: ui}
 
 1. Navigate to the service dashboard for your service.
 2. Click _Service Credentials_ to open the _Service Credentials_ pane.
@@ -120,6 +121,7 @@ echo 'pasted bundle contents' | base64 -D > formation_id_endpoint_type.zip
 
 ### Creating Users from the {{site.data.keyword.cloud_notm}} CLI
 {: #user-management-create-users-cli}
+{: cli}
 
 To manage your service through the {{site.data.keyword.cloud_notm}} CLI and the [Cloud Databases plug-in](/docs/cli?topic=cli-install-ibmcloud-cli), create a new user with `cdb user-create`. For example, to create a new user for an "example-deployment", use the following command.
 ```sh
@@ -131,9 +133,10 @@ Once the task finishes, you can retrieve the new user's connection strings with 
 
 ### Creating Users from the API
 {: #user-management-create-users-api}
+{: cli}
 
 The _Foundation Endpoint_ that is shown on the _Overview_ pane of your service provides the base URL to access this deployment through the API. To create and manage users, use the base URL with the `/users` endpoint.
-```curl
+```sh
 curl -X POST 'https://api.{region}.databases.cloud.ibm.com/v4/ibm/deployments/{id}/users' \
 -H "Authorization: Bearer $APIKEY" \
 -H "Content-Type: application/json" \
@@ -155,6 +158,7 @@ Generating credentials from an existing user does not check for or create that u
 
 ### The CLI Section
 {: #user-management-cli-section}
+{: cli}
 
 #### CQLSH example
 {: #user-management-cqlsh-example}
