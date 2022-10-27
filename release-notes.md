@@ -25,14 +25,14 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 {: release-note}
 
 Deploying and Connecting a Cloud Databases Instance Tutorial
-:  This tutorial guides you through the process of deploying a {{site.data.keyword.databases-for}} instance and connecting it to a web front end by creating a webpage that allows visitors to input a word and its definition. These values are then stored in a database running on {{site.data.keyword.databases-for}}. You install the database infrastructure by using Terraform and your web application uses the popular Express framework. The application can then be run locally, or by using Docker. For more information, see [Deploying and Connecting a {{site.data.keyword.databases-for}} Instance](/docs/databases-for-cassandra?topic=cloud-databases-cbr&interface=ui).
+:  This tutorial guides you through the process of deploying a {{site.data.keyword.databases-for}} instance and connecting it to a web front end by creating a webpage that allows visitors to input a word and its definition. These values are then stored in a database running on {{site.data.keyword.databases-for}}. You install the database infrastructure by using Terraform and your web application uses the popular Express framework. The application can then be run locally, or by using Docker. For more information, see [Deploying and Connecting a {{site.data.keyword.databases-for}} Instance](/docs/databases-for-cassandra?topic=cloud-databases-create-instance-tutorial).
 
 ## 10 October 2022
 {: #databases-for-cassandra-10oct2022}
 {: release-note}
 
 Protecting {{site.data.keyword.databases-for-cassandra_full}} resources with context-based restrictions
-:  Context-based restrictions (CBR) give account owners and administrators the ability to define and enforce access restrictions for {{site.data.keyword.cloud}} resources based on the context of access requests. Access to {{site.data.keyword.databases-for}} resources can be controlled with CBR and identity and access management (IAM) policies. For more information, see [Protecting Cloud Databases resources with context-based restrictions](/docs/databases-for-cassandra?topic=cloud-databases-cbr).
+:  Context-based restrictions (CBR) give account owners and administrators the ability to define and enforce access restrictions for {{site.data.keyword.cloud}} resources based on the context of access requests. Access to {{site.data.keyword.databases-for}} resources can be controlled with CBR and identity and access management (IAM) policies. For more information, see [Protecting Cloud Databases resources with context-based restrictions](/docs/databases-for-cassandra?topic=cloud-databases-cbr&interface=ui).
 
 ## 24 November 2021
 {: #databases-for-cassandra-24nov2021}
