@@ -35,7 +35,6 @@ toc:
       - howto-admin-password.md
       - howto-getting-connection-strings.md
       - /cloud-databases/cloud-databases-provisioning
-      - /cloud-databases/cloud-databases-cbr
       - /cloud-databases/cloud-databases-deprovisioning
       - /cloud-databases/cloud-databases-migrate-data-center
       - /cloud-databases/cloud-databases-ha-dr
@@ -73,6 +72,8 @@ toc:
           label: Enhancing security
           topics: 
           - /cloud-databases/cloud-databases-manage-security-compliance
+          - /cloud-databases/cloud-databases-cbr
+          - /cloud-databases/cloud-databases-cbr-tutorial
   - navgroup: 
       id: help
       topics:
