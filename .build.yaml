@@ -1,7 +1,3 @@
 includes:
   - https://github.ibm.com/cloud-docs/cloud-databases
   - https://github.ibm.com/cloud-docs/databases-cli-plugin
-  - https://github.ibm.com/cloud-api-docs/databases-for-postgresql
-translation:
-  exclude:
-    byFilePath:
