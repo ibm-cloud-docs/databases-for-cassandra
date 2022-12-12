@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-10-31"
+lastupdated: "2022-12-12"
 
 keywords: databases, scaling, autoscaling, memory, disk I/O, cassandra, datastax, dse, datastax autoscaling, cassandra autoscaling
 
@@ -10,12 +10,6 @@ subcollection: databases-for-cassandra
 
 ---
 
-{:external: .external target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:tip: .tip}
 {{site.data.keyword.attribute-definition-list}}
 
 
