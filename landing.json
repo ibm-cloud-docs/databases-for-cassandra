@@ -1,53 +1,53 @@
 {
-    "title": "IBM Cloud® Databases for DataStax docs",
-    "lastupdated": "2023-02-21",
-    "introduction": "IBM Cloud® Databases for DataStax is a scale-out NoSQL database built on Apache Cassandra, designed for high-availability and workload flexibility.",
-    "section_devtools": {
-      "api": "/apidocs/cloud-databases-api/cloud-databases-api-v5#introduction", 
-      "cli": "/docs/databases-cli-plugin", 
-      "terraform": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/database"
+  "title": "IBM Cloud® Databases for DataStax docs",
+  "lastupdated": "2023-03-03",
+  "introduction": "IBM Cloud® Databases for DataStax is a scale-out NoSQL database built on Apache Cassandra, designed for high-availability and workload flexibility.",
+  "section_devtools": {
+    "api": "/apidocs/cloud-databases-api/cloud-databases-api-v5#introduction", 
+    "cli": "/docs/databases-cli-plugin", 
+    "terraform": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/database"
+  },
+  "section_recommended": [
+    {
+      "title": "Getting Started",
+      "description": "A brief tutorial to introduce using an IBM Cloud® Databases for DataStax deployment.",
+      "href": "/docs/databases-for-cassandra?topic=databases-for-cassandra-getting-started"
     },
-    "section_recommended": [
-      {
-        "title": "Getting Started",
-        "description": "A brief tutorial to introduce using an IBM Cloud® Databases for DataStax deployment.",
-        "href": "/docs/databases-for-cassandra?topic=databases-for-cassandra-getting-started"
-      },
-      {
-        "title": "Setting the Admin Password",
-        "description": "The Databases for DataStax service is provisioned with an admin user. You must set the admin password before you use it to connect.",
-        "href": "/docs/databases-for-cassandra?topic=databases-for-cassandra-admin-password&interface=cli"
-      },
-      {
-        "title": "Creating and managing users, roles, and privileges",
-        "description": "IBM Cloud® Databases for DataStax uses a system of roles to manage database permissions. Roles are used to give a single user or a group of users a set of privileges.",
-        "href": "/docs/databases-for-cassandra?topic=databases-for-cassandra-user-management&interface=cli"
-      }
-    ],
-    "section_learn": {
-      "developer": "https://developer.ibm.com/depmodels/cloud/",
-      "architecture": "https://www.ibm.com/cloud/architecture",
-      "training": "https://www.ibm.com/training/cloud",
-      "community": "https://community.ibm.com/community/user/publiccloud/home"
+    {
+      "title": "Setting the Admin Password",
+      "description": "The Databases for DataStax service is provisioned with an admin user. You must set the admin password before you use it to connect.",
+      "href": "/docs/databases-for-cassandra?topic=databases-for-cassandra-admin-password&interface=cli"
     },
-    "section_updates": {
-      "view_more": "/docs/acme-test?topic=acme-test-release-notes",
-      "tiles": [
-        {
-          "date": "19 October 2022",
-          "title": "Deploying and Connecting an IBM Cloud® Databases Instance Tutorial",
-          "description": "This tutorial guides you through the process of deploying a Cloud Databases instance and connecting it to a web front end by creating a webpage that allows visitors to input a word and its definition. These values are then stored in a database running on Cloud Databases. You install the database infrastructure by using Terraform and your web application uses the popular Express framework. The application can then be run locally, or by using Docker."
-        },
-        {
-          "date": "11 October 2022",
-          "title": "Protecting IBM Cloud® Databases for DataStax resources with context-based restrictions",
-          "description": "Context-based restrictions (CBR) give account owners and administrators the ability to define and enforce access restrictions for IBM Cloud® resources based on the context of access requests. Access to Cloud Databases resources can be controlled with CBR and identity and access management (IAM) policies."
-        },
-        {
-          "date": "24 November 2021",
-          "title": "IBM Cloud® Databases for DataStax 6.7 End of Life in May, 2022",
-          "description": "On May 24, 2022, IBM Cloud® Databases for DataStax version 6.7 reaches its end of life."
-        }
-      ]
+    {
+      "title": "Creating and managing users, roles, and privileges",
+      "description": "IBM Cloud® Databases for DataStax uses a system of roles to manage database permissions. Roles are used to give a single user or a group of users a set of privileges.",
+      "href": "/docs/databases-for-cassandra?topic=databases-for-cassandra-user-management&interface=cli"
     }
+  ],
+  "section_learn": {
+    "developer": "https://developer.ibm.com/depmodels/cloud/",
+    "architecture": "https://www.ibm.com/cloud/architecture",
+    "training": "https://www.ibm.com/training/cloud",
+    "community": "https://community.ibm.com/community/user/publiccloud/home"
+  },
+  "section_updates": {
+    "view_more": "/docs/databases-for-cassandra?topic=databases-for-cassandra-cassandra-relnotes",
+    "tiles": [
+      {
+        "date": "19 October 2022",
+        "title": "Deploying and Connecting an IBM Cloud® Databases Instance Tutorial",
+        "description": "This tutorial guides you through the process of deploying a Cloud Databases instance and connecting it to a web front end by creating a webpage that allows visitors to input a word and its definition. These values are then stored in a database running on Cloud Databases. You install the database infrastructure by using Terraform and your web application uses the popular Express framework. The application can then be run locally, or by using Docker."
+      },
+      {
+        "date": "11 October 2022",
+        "title": "Protecting IBM Cloud® Databases for DataStax resources with context-based restrictions",
+        "description": "Context-based restrictions (CBR) give account owners and administrators the ability to define and enforce access restrictions for IBM Cloud® resources based on the context of access requests. Access to Cloud Databases resources can be controlled with CBR and identity and access management (IAM) policies."
+      },
+      {
+        "date": "24 November 2021",
+        "title": "IBM Cloud® Databases for DataStax 6.7 End of Life in May, 2022",
+        "description": "On May 24, 2022, IBM Cloud® Databases for DataStax version 6.7 reaches its end of life."
+      }
+    ]
   }
+}
