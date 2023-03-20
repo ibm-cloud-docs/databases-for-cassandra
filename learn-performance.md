@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2022
-lastupdated: "2022-06-29"
+  years: 2020, 2023
+lastupdated: "2023-03-20"
 
 keywords: databases, monitoring, scaling, autoscaling, resources, connection limits, cassandra, datastax, dse, datastax iops, cassandra iops
 
@@ -10,11 +10,7 @@ subcollection: databases-for-cassandra
 
 ---
 
-{:external: .external target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:pre: .pre}
+{{site.data.keyword.attribute-definition-list}}
 
 # Performance
 {: #performance}
@@ -29,7 +25,7 @@ subcollection: databases-for-cassandra
 ## Disk input/output operations per second (IOPS)
 {: #iops}
 
-The number of IOPS is limited by the type of storage volume. Storage volumes for {{site.data.keyword.databases-for-cassandra}} deployments are provisioned on [Block Storage Endurance Volumes in the 10 IOPS per GB tier](/docs/BlockStorage?topic=BlockStorage-orderingthroughConsole#orderingthroughConsoleEndurance). If your operational load saturates or exceeds the IOPS limit, database requests and operations are delayed until the disk can catch up. Extended periods of heavy-load can cause your deployment to be unable to process queries and become effectively unavailable. If you experience delayed responses and failing operations, you might be exceeding the disk's IOPS limit. You can increase the number IOPS available to your deployment by increasing disk space.
+The number of IOPS is limited by the type of storage volume. Storage volumes for {{site.data.keyword.databases-for-cassandra}} deployments are provisioned on [Block Storage Endurance Volumes in the 10 IOPS per GB tier](/docs/BlockStorage?topic=BlockStorage-orderingBlockStorage&interface=ui). If your operational load saturates or exceeds the IOPS limit, database requests and operations are delayed until the disk can catch up. Extended periods of heavy-load can cause your deployment to be unable to process queries and become effectively unavailable. If you experience delayed responses and failing operations, you might be exceeding the disk's IOPS limit. You can increase the number IOPS available to your deployment by increasing disk space.
 
 ## Memory Management
 {: #mem-manage}
