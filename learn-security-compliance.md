@@ -1,7 +1,7 @@
 ---
 copyright:
-  years: 2018, 2022
-lastupdated: "2022-06-29"
+  years: 2018, 2023
+lastupdated: "2023-04-11"
 
 keywords: databases, soc, hipaa, gdpr, terms, cassandra, datastax, dse, datastax security compliance, datastax dedicated cores
 
@@ -9,11 +9,7 @@ subcollection: databases-for-cassandra
 
 ---
 
-{:external: .external target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:pre: .pre}
+{{site.data.keyword.attribute-definition-list}}
 
 # Security and Compliance
 {: #security-compliance}
@@ -23,17 +19,17 @@ subcollection: databases-for-cassandra
 
 {{site.data.keyword.databases-for-cassandra_full}} use the following methods to protect data in transit or in storage.
 - All {{site.data.keyword.databases-for-cassandra}} connections use TLS/SSL encryption for data in transit. The current supported version of this encryption is TLS 1.2.
-- Access to the Account, Management Console UI, and API is secured via [Identity and Access Management (IAM)](/docs/databases-for-cassandra?topic=cloud-databases-iam).
+- Access to the Account, Management Console UI, and API is secured via [Identity and Access Management (IAM)](/docs/databases-for-cassandra?topic=databases-for-cassandra-iam).
 - Access to the database is secured through the standard access controls provided by the database. These access controls are configured to require valid database-level credentials that are obtainable only through prior access to the database or through our Management Console UI or API.
-- All {{site.data.keyword.databases-for-cassandra}} storage is provided on storage encrypted with LUKS by using AES-256. The default keys are managed by [{{site.data.keyword.keymanagementserviceshort}}](/docs/key-protect?topic=key-protect-about). Bring-your-own-key (BYOK) for encryption is also available through [Key Protect Integration](/docs/databases-for-cassandra?topic=cloud-databases-key-protect).
-- IP Allowlisting - All deployments support [allowlisting IP addresses](/docs/databases-for-cassandra?topic=cloud-databases-allowlisting) to restrict access to the service.
-- Public and Private Networking - {{site.data.keyword.databases-for-cassandra}} is integrated with [Service Endpoints](/docs/databases-for-cassandra?topic=cloud-databases-service-endpoints). You can select whether to use connections over the public network, the {{site.data.keyword.cloud_notm}} internal network, or both.
+- All {{site.data.keyword.databases-for-cassandra}} storage is provided on storage encrypted with LUKS by using AES-256. The default keys are managed by [{{site.data.keyword.keymanagementserviceshort}}](/docs/key-protect?topic=key-protect-about). Bring-your-own-key (BYOK) for encryption is also available through [Key Protect Integration](/docs/databases-for-cassandra?topic=databases-for-cassandra-key-protect).
+- IP Allowlisting - All deployments support [allowlisting IP addresses](/docs/databases-for-cassandra?topic=databases-for-cassandra-allowlisting) to restrict access to the service.
+- Public and Private Networking - {{site.data.keyword.databases-for-cassandra}} is integrated with [Service Endpoints](/docs/databases-for-cassandra?topic=databases-for-cassandra-service-endpoints). You can select whether to use connections over the public network, the {{site.data.keyword.cloud_notm}} internal network, or both.
 - Dedicated Cores - Allocating dedicated cores to your deployment introduces hypervisor-level isolation to your database instance, by using isolated virtual machines to ensure that your data processing remains separated from other customers. It also provides a guaranteed minimum number of CPUs to your deployment. Deployments with dedicated cores in the same Resource Group and {{site.data.keyword.cloud_notm}} Region might share a virtual machine.
 
 ## Data Resilience
 {: #security-compliance-dr}
 
-- [Backups](/docs/databases-for-cassandra?topic=cloud-databases-dashboard-backups) are included in the service. {{site.data.keyword.databases-for-cassandra}} backups reside in [{{site.data.keyword.cos_full_notm}}](/docs/cloud-object-storage?topic=cloud-object-storage-about-cloud-object-storage&cloud-object-storage-about-cloud-object-storage) and are also [encrypted](/docs/cloud-object-storage?topic=cloud-object-storage-security).
+- [Backups](/docs/databases-for-cassandra?topic=databases-for-cassandra-dashboard-backups) are included in the service. {{site.data.keyword.databases-for-cassandra}} backups reside in [{{site.data.keyword.cos_full_notm}}](/docs/cloud-object-storage?topic=cloud-object-storage-about-cloud-object-storage&cloud-object-storage-about-cloud-object-storage) and are also [encrypted](/docs/cloud-object-storage?topic=cloud-object-storage-security).
 - {{site.data.keyword.databases-for-cassandra}} deployments are configured with a leaderless architecture. Deployments contain only data token owners and replicas of that data.
 - If you deploy to an {{site.data.keyword.cloud_notm}} Multi-Zone Region (MZR), the members (or nodes) are spread over the region's availability zone locations. 
 - If you deploy to an {{site.data.keyword.cloud_notm}} Single-Zone Region (SZR), each database member (or node) resides on a different host in the data center. 
@@ -75,7 +71,7 @@ Customers are responsible for the storing, processing, and transmission of their
 
 It is the customer’s responsibility to familiarize themselves with these processes and to manage data retention and removal from the service according to the customer’s policies.
 
-A full list of PCI DSS-ready {{site.data.keyword.cloud_notm}} Platform services, and options to request a PCI DSS AOC and SRM guide, can be found at the [IBM Cloud compliance page](https://www.ibm.com/cloud/compliance/industry).
+A full list of PCI DSS-ready {{site.data.keyword.cloud_notm}} Platform services, and options to request a PCI DSS AOC and SRM guide, can be found at the [IBM Cloud compliance page](https://www.ibm.com/cloud/compliance#Industry%20programs){: external}.
 
 
 ## Terms
