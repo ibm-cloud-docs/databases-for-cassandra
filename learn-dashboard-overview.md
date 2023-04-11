@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2022
-lastupdated: "2022-06-29"
+  years: 2020, 2023
+lastupdated: "2023-04-11"
 
 keywords: deployment, crn, task, gui, api endpoint, cassandra, datastax, dse, datastax dashboard, cassandra dashboard
 
@@ -10,12 +10,7 @@ subcollection: databases-for-cassandra
 
 ---
 
-{:external: .external target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:tip: .tip}
+{{site.data.keyword.attribute-definition-list}}
 
 # The Dashboard Overview
 {: #dashboard-overview}
@@ -35,7 +30,7 @@ The ID is a [CRN (Cloud Resource Name)](/docs/account?topic=account-crn) which u
 ### Recent Tasks
 {: #dashboard-overview-tasks}
 
-Every time that you make administrative changes to your service (such as scaling, or taking a manual backup), a task starts up. The _Recent Tasks_ panel shows the task name and progress bar for any running tasks, and a list of the most recently completed tasks. Depending on how busy your deployment is, successful tasks can be shown for 24 - 48 hours. Unsuccessful tasks can show for 7 - 8 days. Tasks can also be retrieved from the [Cloud Databases API](https://cloud.ibm.com/apidocs/cloud-databases-api#get-currently-running-tasks-on-a-deployment) and [CLI plug-in](https://cloud.ibm.com/docs/databases-cli-plugin?topic=databases-cli-plugin-cdb-reference#deployment-tasks-list). A historical record of tasks from any time period is available through the [{{site.data.keyword.at_full}} integration](/docs/databases-for-cassandra?topic=cloud-databases-activity-tracker).
+Every time that you make administrative changes to your service (such as scaling, or taking a manual backup), a task starts up. The _Recent Tasks_ panel shows the task name and progress bar for any running tasks, and a list of the most recently completed tasks. Depending on how busy your deployment is, successful tasks can be shown for 24 - 48 hours. Unsuccessful tasks can show for 7 - 8 days. Tasks can also be retrieved from the [Cloud Databases API](https://cloud.ibm.com/apidocs/cloud-databases-api#get-currently-running-tasks-on-a-deployment) and [CLI plug-in](https://cloud.ibm.com/docs/databases-cli-plugin?topic=databases-cli-plugin-cdb-reference#deployment-tasks-list). A historical record of tasks from any time period is available through the [{{site.data.keyword.at_full}} integration](/docs/databases-for-cassandra?topic=databases-for-cassandra-activity-tracker).
 
 ### Endpoints
 {: #dashboard-overview-endpoints}
@@ -44,7 +39,7 @@ The _Endpoints_ pane within the _Overview_ pane contains connection strings for 
 
 Reference tables for the different connection types are available on the [Getting Credentials and Connection Strings](/docs/databases-for-cassandra?topic=databases-for-cassandra-connection-strings) page.
 
-Connection strings reflect whether your deployment uses public endpoints, private endpoints or both. You can configure which endpoints are available on your deployment. For more information, see the [Service Endpoints Integration](/docs/databases-for-cassandra?topic=cloud-databases-service-endpoints) page.
+Connection strings reflect whether your deployment uses public endpoints, private endpoints or both. You can configure which endpoints are available on your deployment. For more information, see [Service Endpoints Integration](/docs/databases-for-cassandra?topic=databases-for-cassandra-service-endpoints).
 
 You can manage your {{site.data.keyword.databases-for-cassandra}} service through the {{site.data.keyword.databases-for}} API. This panel provides the essential information for using the API. For more information about the {{site.data.keyword.databases-for}} API, see the [API reference](https://{DomainName}/apidocs/cloud-databases-api) page.
 
@@ -58,14 +53,14 @@ The resources tab contains information and configuration options on the size and
 ## Backups
 {: #dashboard-overview-backups}
 
-The _Backups_ tab is the UI for managing your deployments backups. All of the available backups are listed with their timestamps. Click a backup to grab its ID or to restore it into a new deployment. More information is on the [Managing Backups](/docs/databases-for-cassandra?topic=cloud-databases-dashboard-backups) page.
+The _Backups_ tab is the UI for managing your deployments backups. All of the available backups are listed with their timestamps. Click a backup to grab its ID or to restore it into a new deployment. For more information, see [Managing Backups](/docs/databases-for-cassandra?topic=databases-for-cassandra-dashboard-backups).
 
 ## Observability
 {: #dashboard-overview-observe}
 
 The _Observability_ tab provides access to the IBM Cloud Monitoring, logging, and event tracking integrations available for your deployment. 
-- [{{site.data.keyword.at_full}}](/docs/databases-for-cassandra?topic=cloud-databases-activity-tracker)
-- [{{site.data.keyword.la_full}}](/docs/databases-for-cassandra?topic=cloud-databases-logging)
+- [{{site.data.keyword.at_full}}](/docs/databases-for-cassandra?topic=databases-for-cassandra-activity-tracker)
+- [{{site.data.keyword.la_full}}](/docs/databases-for-cassandra?topic=databases-for-cassandra-logging)
 - [{{site.data.keyword.monitoringfull}}](/docs/databases-for-cassandra?topic=databases-for-cassandra-monitoring)
 
 ## Settings
@@ -74,12 +69,12 @@ The _Observability_ tab provides access to the IBM Cloud Monitoring, logging, an
 The _Settings_ tab contains the UI for many of the tunable settings for your deployment. You can 
 - view encryption details. Encryption at rest is enabled for all {{site.data.keyword.databases-for-cassandra}} deployments. If you brought your own encryption key from [Key Protect](/docs/databases-for-cassandra?topic=cloud-databases-key-protect), the panel provides a link to your Key Protect instance and the _Encryption Key_ field has the name of the key.
 - [Change the admin password](/docs/databases-for-cassandra?topic=databases-for-cassandra-admin-password)
-- [Implement or modify an IP allowlist](/docs/databases-for-cassandra?topic=cloud-databases-allowlisting)
+- [Implement or modify an IP allowlist](/docs/databases-for-cassandra?topic=databases-for-cassandra-allowlisting)
 
 ## Service Credentials
 {: #dashboard-overview-service-cred}
 
-You can generate a new set of credentials for cases where you want to manually [connect an app](/docs/databases-for-cassandra?topic=databases-for-cassandra-ibmcloud-app) or [external consumer](/docs/databases-for-cassandra?topic=databases-for-cassandra-external-app) to an IBM Cloud service. [Learn more](/docs/account?topic=account-service_credentials).
+You can generate a new set of credentials for cases where you want to manually [connect an app](/docs/databases-for-cassandra?topic=databases-for-cassandra-ibmcloud-app) or [external consumer](/docs/databases-for-cassandra?topic=databases-for-cassandra-external-app) to an IBM Cloud service. For more information, see [Adding and viewing credentials](/docs/account?topic=account-service_credentials).
 
 ## Connections
 {: #dashboard-overview-conn}
