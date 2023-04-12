@@ -50,7 +50,6 @@ toc:
           - howto-resources-scaling.md
           - howto-autoscaling.md
           - howto-horizontal-scaling.md
-          - dse-search.md
       - include: ../cloud-databases/howto-manage-backups.md
       - include: ../cloud-databases/howto-allowlists.md
       - topicgroup: 
