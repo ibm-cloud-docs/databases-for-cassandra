@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2022
-lastupdated: "2022-10-20"
+  years: 2019, 2023
+lastupdated: "2023-04-12"
 
 keywords: databases, scaling, memory, disk IOPS, CPU, cassandra, datastax, dse, datastax dedicated cores, cassandra dedicated cores
 
@@ -64,7 +64,7 @@ You can increase or decrease the CPU shares to the deployment. With dedicated co
 
 - A few scaling operations can be more long running than others.  Similarly, drastically increasing CPU, RAM, or Disk can take longer than smaller increases to account for provisioning more underlying hardware resources.
 
-- Scaling operations are logged in [{{site.data.keyword.at_full}}](/docs/databases-for-cassandra?topic=cloud-databases-activity-tracker).
+- Scaling operations are logged in [{{site.data.keyword.at_full}}](/docs/databases-for-cassandra?topic=databases-for-cassandra-activity-tracker).
 
 - If you find consistent trends in resource usage or would like to set up scaling when certain resource thresholds are reached, consider enabling [autoscaling](/docs/databases-for-cassandra?topic=databases-for-cassandra-autoscaling) on your deployment.
 
