@@ -124,4 +124,4 @@ You can manage your deployment with [IBM Cloud CLI](/docs/cli?topic=cli-install-
 
 If you are planning to use {{site.data.keyword.databases-for-cassandra}} for your applications, check out [Connecting an external application](/docs/databases-for-cassandra?topic=databases-for-cassandra-external-app) and [Connecting an IBM Cloud application](/docs/databases-for-cassandra?topic=databases-for-cassandra-ibmcloud-app).
 
-To ensure the stability of your applications and your database, check out [High-Availability](/docs/databases-for-cassandra?topic=databases-for-cassandra-high-availability and [Performance](/docs/databases-for-cassandra?topic=databases-for-cassandra-performance).
+To ensure the stability of your applications and your database, check out [High-Availability](/docs/databases-for-cassandra?topic=databases-for-cassandra-high-availability) and [Performance](/docs/databases-for-cassandra?topic=databases-for-cassandra-performance).
