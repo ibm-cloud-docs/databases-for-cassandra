@@ -22,7 +22,7 @@ completion-time: 20m
 {: toc-services=""} 
 {: toc-completion-time="20m"}
 
-The {{site.data.keyword.cloud_notm}}{{site.data.keyword.databases-for-cassandra_full}} Getting started tutorial demonstrates how to use the {{site.data.keyword.cloud_notm}} Dashboard to create an {{site.data.keyword.databases-for-cassandra_full}} service instance. You also see essential information to enable your application to work with the database.
+This tutorial uses the {{site.data.keyword.cloud_notm}} Dashboard to create an {{site.data.keyword.databases-for-cassandra_full}} service instance. You also see essential information to enable your application to work with the database.
 
 This tutorial is a short introduction to using an {{site.data.keyword.databases-for-cassandra_full}} deployment. 
 
