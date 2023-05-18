@@ -61,6 +61,7 @@ toc:
           - include: ../cloud-databases/terra-mongodb-tutorial.md
           - include: ../cloud-databases/k8-tutorial.md
           - include: ../cloud-databases/truck-tracker-tutorial.md
+          - include: ../cloud-databases/disk-util-alerts-tutorial.md
       - topicgroup: 
           label: Logging and monitoring
           topics: 
