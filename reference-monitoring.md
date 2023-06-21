@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2020, 2023
-lastupdated: "2023-04-17"
+lastupdated: "2023-06-20"
 
 keywords: monitoring, metrics, iops, disk usage, memory usage, connection usage, cassandra, datastax, dse, datastax i/o, cassandra i/o
 
@@ -13,6 +13,9 @@ subcollection: databases-for-cassandra
 
 # Monitoring Integration
 {: #monitoring}
+
+{{site.data.keyword.databases-for-cassandra_full}} is deprecated and no longer supported as of 30 June 2024. For more information, see the [deprecation details](/docs/databases-for-cassandra?topic=databases-for-cassandra-deprecation#dep_details).
+{: deprecated}
 
 Monitoring for {{site.data.keyword.databases-for-cassandra_full}} deployments is provided through integration with the {{site.data.keyword.monitoringfull}} service. Your deployments forward selected information so you can monitor deployment health and resource usage. To see your {{site.data.keyword.databases-for-cassandra}} dashboards in {{site.data.keyword.monitoringfull_notm}}, you must [Enable Platform Metrics](/docs/monitoring?topic=monitoring-platform_metrics_enabling) in the same region as your deployment. If you have deployments in more than one region, you must provision {{site.data.keyword.monitoringfull_notm}} and enable platform metrics in each region.
 
