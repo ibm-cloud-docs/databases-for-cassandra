@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2022
-lastupdated: "2022-06-29"
+  years: 2021, 2023
+lastupdated: "2023-06-20"
 
 keywords: search, gui, api, cli, cassandra, datastax, dse search, cassandra search
 
@@ -10,15 +10,13 @@ subcollection: databases-for-cassandra
 
 ---
 
-{:external: .external target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:tip: .tip}
+{{site.data.keyword.attribute-definition-list}}
 
 # DSE Search 
 {: #dse-search}
+
+{{site.data.keyword.databases-for-cassandra_full}} is deprecated and no longer supported as of 30 June 2024. For more information, see the [deprecation details](/docs/databases-for-cassandra?topic=databases-for-cassandra-deprecation#dep_details).
+{: deprecated}
 
 DSE Search is a separate scalable part of {{site.data.keyword.databases-for-cassandra_full}} (DSE) version 5.1. DSE Search enables data querying and filtering by using CQL Solr queries. Read more about DSE Search capabilities and benefits in the DataStax Enterprise documentation's [About DSE Search page](https://docs.datastax.com/en/dse/5.1/dse-dev/datastax_enterprise/search/searchAbout.html). 
 
