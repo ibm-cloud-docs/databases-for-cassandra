@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2022
-lastupdated: "2022-10-21"
+  years: 2019, 2023
+lastupdated: "2023-06-20"
 
 keywords: admin, superuser, roles, service credentials, cassandra, datastax, dse, managing datastax, managing cassandra, datastax user
 
@@ -10,16 +10,13 @@ subcollection: databases-for-cassandra
 
 ---
 
-{:shortdesc: .shortdesc}
-{:external: .external target="_blank"}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:tip: .tip}
 {{site.data.keyword.attribute-definition-list}}
 
 # Creating and managing users, roles, and privileges
 {: #user-management}
+
+{{site.data.keyword.databases-for-cassandra_full}} is deprecated and no longer supported as of 30 June 2024. For more information, see the [deprecation details](/docs/databases-for-cassandra?topic=databases-for-cassandra-deprecation#dep_details).
+{: deprecated}
 
 {{site.data.keyword.databases-for-cassandra_full}} uses a system of roles to manage database permissions. Roles are used to give a single user or a group of users a set of privileges. 
 
