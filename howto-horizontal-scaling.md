@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2022
-lastupdated: "2022-06-29"
+  years: 2019, 2023
+lastupdated: "2023-06-20"
 
 keywords: databases, scaling, horizontal scaling, cassandra, datastax, dse, datastax horizontal scaling, cassandra horizontal scaling
 
@@ -10,16 +10,13 @@ subcollection: databases-for-cassandra
 
 ---
 
-{:external: .external target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:tip: .tip}
-
+{{site.data.keyword.attribute-definition-list}}
 
 # Adding DataStax Nodes
 {: #horizontal-scaling}
+
+{{site.data.keyword.databases-for-cassandra_full}} is deprecated and no longer supported as of 30 June 2024. For more information, see the [deprecation details](/docs/databases-for-cassandra?topic=databases-for-cassandra-deprecation#dep_details).
+{: deprecated}
 
 It is possible to scale your {{site.data.keyword.databases-for-cassandra_full}} deployment horizontally by adding more nodes, or members. If your deployment starts to strain or slow down, adding nodes increases capacity and reliability. When a node is added, {{site.data.keyword.databases-for-cassandra}} automatically balances the workload across all the nodes in your deployment.
 
