@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-04-11"
+lastupdated: "2023-06-20"
 
 keywords: deployment, crn, task, gui, api endpoint, cassandra, datastax, dse, datastax dashboard, cassandra dashboard
 
@@ -14,6 +14,9 @@ subcollection: databases-for-cassandra
 
 # The Dashboard Overview
 {: #dashboard-overview}
+
+{{site.data.keyword.databases-for-cassandra_full}} is deprecated and no longer supported as of 30 June 2024. For more information, see the [deprecation details](/docs/databases-for-cassandra?topic=databases-for-cassandra-deprecation#dep_details).
+{: deprecated}
 
 The _Overview_ page shows you information about your {{site.data.keyword.databases-for-cassandra_full}} deployment. The overview includes essential identifying information.
 
