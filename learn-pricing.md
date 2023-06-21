@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-03"
+lastupdated: "2023-06-20"
 
 keywords: databases, pricing, resources, scaling, cassandra, datastax, dse, backup pricing, cassandra pricing, datastax pricing
 
@@ -13,6 +13,9 @@ subcollection: databases-for-cassandra
 
 # Pricing
 {: #pricing}
+
+{{site.data.keyword.databases-for-cassandra_full}} is deprecated and no longer supported as of 30 June 2024. For more information, see the [deprecation details](/docs/databases-for-cassandra?topic=databases-for-cassandra-deprecation#dep_details).
+{: deprecated}
 
 A {{site.data.keyword.databases-for-cassandra_full}} Standard plan deploys as one highly available cluster with three data members. Your data is replicated on all three members. The Standard plan is priced based on the total amount of disk storage, RAM, dedicated cores, and backup storage that is allocated to deployments, prorated hourly. {{site.data.keyword.databases-for-cassandra}} deployments have a minimum of 20 GB of disk and 12 GB of RAM per data member.
 
