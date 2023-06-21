@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2022
-lastupdated: "2022-06-29"
+  years: 2018, 2023
+lastupdated: "2023-06-20"
 
 keywords: databases, connection limits, cassandra, datastax, dse, datastax replication, datastax high availability
 
@@ -10,16 +10,13 @@ subcollection: databases-for-cassandra
 
 ---
 
-{:external: .external target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
+{{site.data.keyword.attribute-definition-list}}
 
 # High-Availability
 {: #high-availability}
+
+{{site.data.keyword.databases-for-cassandra_full}} is deprecated and no longer supported as of 30 June 2024. For more information, see the [deprecation details](/docs/databases-for-cassandra?topic=databases-for-cassandra-deprecation#dep_details).
+{: deprecated}
 
 {{site.data.keyword.databases-for-cassandra_full}} is a managed cloud database service that is fully integrated into the {{site.data.keyword.cloud_notm}} environments. The database, storage, and supporting infrastructure all run in {{site.data.keyword.cloud_notm}}.
 
