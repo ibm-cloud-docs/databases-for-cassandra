@@ -1,7 +1,7 @@
 {
   "title": "IBM Cloud® Databases for DataStax docs",
   "lastupdated": "2023-06-21",
-  "introduction": "IBM Cloud® Databases for DataStax is a scale-out NoSQL database built on Apache Cassandra, designed for high-availability and workload flexibility. {{site.data.keyword.databases-for-cassandra_full}} is deprecated and no longer supported as of 30 June 2024. For more information, see the [deprecation details](/docs/databases-for-cassandra?topic=databases-for-cassandra-deprecation#dep_details).",
+  "introduction": "IBM Cloud® Databases for DataStax is a scale-out NoSQL database built on Apache Cassandra, designed for high-availability and workload flexibility. IBM Cloud® Databases for DataStax is deprecated and no longer supported as of 30 June 2024. For more information, see the [deprecation details](/docs/databases-for-cassandra?topic=databases-for-cassandra-deprecation#dep_details).",
   "section_devtools": {
     "api": "/apidocs/cloud-databases-api/cloud-databases-api-v5#introduction", 
     "cli": "/docs/databases-cli-plugin", 
@@ -9,9 +9,9 @@
   },
   "section_recommended": [
     {
-      "title": "Getting Started",
-      "description": "A brief tutorial to introduce using an IBM Cloud® Databases for DataStax deployment.",
-      "href": "/docs/databases-for-cassandra?topic=databases-for-cassandra-getting-started"
+      "title": "Deprecation of IBM Cloud® Databases for DataStax",
+      "description": "IBM Cloud® Databases for DataStax is deprecated and no longer supported as of 30 June 2024.",
+      "href": "/docs/databases-for-cassandra?topic=databases-for-cassandra-deprecation"
     },
     {
       "title": "Setting the Admin Password",
