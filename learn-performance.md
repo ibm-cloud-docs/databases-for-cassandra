@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-03-20"
+lastupdated: "2023-06-20"
 
 keywords: databases, monitoring, scaling, autoscaling, resources, connection limits, cassandra, datastax, dse, datastax iops, cassandra iops
 
@@ -14,6 +14,9 @@ subcollection: databases-for-cassandra
 
 # Performance
 {: #performance}
+
+{{site.data.keyword.databases-for-cassandra_full}} is deprecated and no longer supported as of 30 June 2024. For more information, see the [deprecation details](/docs/databases-for-cassandra?topic=databases-for-cassandra-deprecation#dep_details).
+{: deprecated}
 
 {{site.data.keyword.databases-for-cassandra_full}} deployments can be both manually [scaled to your usage](/docs/databases-for-cassandra?topic=databases-for-cassandra-resources-scaling), or configured to [autoscale](/docs/databases-for-cassandra?topic=databases-for-cassandra-autoscaling) under certain resource conditions. Following are a few factors to consider when you are tuning the performance of your deployment.
 
