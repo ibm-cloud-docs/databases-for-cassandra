@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-05-18"
+lastupdated: "2023-06-20"
 
 keywords: databases-for-cassandra release notes
 
@@ -17,8 +17,18 @@ content-type: release-note
 # Release notes for {{site.data.keyword.databases-for-cassandra_full}}
 {: #cassandra-relnotes}
 
+{{site.data.keyword.databases-for-cassandra_full}} is deprecated and no longer supported as of 30 June 2024. For more information, see the [deprecation details](/docs/databases-for-cassandra?topic=databases-for-cassandra-deprecation#dep_details).
+{: deprecated}
+
 Use these release notes to learn about the latest updates to {{site.data.keyword.databases-for-cassandra_full}} that are grouped by _date or build number_.
 {: shortdesc}
+
+## 20 June 2023
+{: #databases-for-cassandra-20june2023}
+{: release-note}
+
+{{site.data.keyword.databases-for-cassandra}} deprecation
+:  {{site.data.keyword.databases-for-cassandra_full}} is deprecated and no longer supported as of 30 June 2024. For more information, see the [deprecation details](/docs/databases-for-cassandra?topic=databases-for-cassandra-deprecation#dep_details).
 
 ## 18 May 2023
 {: #databases-for-cassandra-18may2023}
