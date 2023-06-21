@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-04-28"
+lastupdated: "2023-06-20"
 
 keywords: nodesync, repair, cassandra, datastax, dse, cassandra external application, nodesync, cassandra migration
 subcollection: databases-for-cassandra
@@ -21,6 +21,9 @@ completion-time: 20m
 {: toc-content-type="tutorial"} 
 {: toc-services=""} 
 {: toc-completion-time="20m"}
+
+{{site.data.keyword.databases-for-cassandra_full}} is deprecated and no longer supported as of 30 June 2024. For more information, see the [deprecation details](/docs/databases-for-cassandra?topic=databases-for-cassandra-deprecation#dep_details).
+{: deprecated}
 
 This tutorial uses the {{site.data.keyword.cloud_notm}} Dashboard to create an {{site.data.keyword.databases-for-cassandra_full}} service instance. You also see essential information to enable your application to work with the database.
 
