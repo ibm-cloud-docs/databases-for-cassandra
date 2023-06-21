@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2022
-lastupdated: "2022-12-12"
+  years: 2020, 2023
+lastupdated: "2023-06-20"
 
 keywords: databases, scaling, autoscaling, memory, disk I/O, cassandra, datastax, dse, datastax autoscaling, cassandra autoscaling
 
@@ -15,6 +15,9 @@ subcollection: databases-for-cassandra
 
 # Autoscaling
 {: #autoscaling}
+
+{{site.data.keyword.databases-for-cassandra_full}} is deprecated and no longer supported as of 30 June 2024. For more information, see the [deprecation details](/docs/databases-for-cassandra?topic=databases-for-cassandra-deprecation#dep_details).
+{: deprecated}
 
 Autoscaling is designed to respond to the short-to-medium term trends in resource usage on your {{site.data.keyword.databases-for-cassandra_full}} deployment. When enabled, your deployment is checked at the interval you specify. If it is running short on resources, more resources are added to the deployment. To keep an eye on your resources, use the [{{site.data.keyword.monitoringfull}} integration](/docs/databases-for-cassandra?topic=databases-for-cassandra-monitoring), which provides metrics for memory, disk space, and disk I/O utilization.
 
