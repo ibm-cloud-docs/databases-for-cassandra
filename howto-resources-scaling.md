@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-04-12"
+lastupdated: "2023-06-20"
 
 keywords: databases, scaling, memory, disk IOPS, CPU, cassandra, datastax, dse, datastax dedicated cores, cassandra dedicated cores
 
@@ -10,16 +10,13 @@ subcollection: databases-for-cassandra
 
 ---
 
-{:external: .external target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:tip: .tip}
 {{site.data.keyword.attribute-definition-list}}
 
 # Scaling Disk, RAM, and CPU
 {: #resources-scaling}
+
+{{site.data.keyword.databases-for-cassandra_full}} is deprecated and no longer supported as of 30 June 2024. For more information, see the [deprecation details](/docs/databases-for-cassandra?topic=databases-for-cassandra-deprecation#dep_details).
+{: deprecated}
 
 You can manually adjust the amount of resources available to your {{site.data.keyword.databases-for-cassandra_full}} deployment to suit your workload and the size of your data.
 
