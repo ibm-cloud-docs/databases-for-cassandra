@@ -7,9 +7,9 @@ toc:
     subcollection: databases-for-cassandra
     service-name: databases-for-cassandra
     version: 2
-    category: database
     audience: service
     href: /docs/databases-for-cassandra?topic=databases-for-cassandra-getting-started
+    release-level: deprecated
     console-page: /catalog/databases-for-cassandra
     product-page: https://www.ibm.com/cloud/databases-for-cassandra
     path: databases-for-cassandra
@@ -19,6 +19,7 @@ toc:
       id: learn
       topics:
       - getting-started.md
+      - deprecation.md
       - include: ../cloud-databases/learn-getting-to-production.md
       - link:
           label: What is Databases for DataStax?
