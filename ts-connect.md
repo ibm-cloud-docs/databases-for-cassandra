@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2022
-lastupdated: "2022-06-29"
+  years: 2020, 2023
+lastupdated: "2023-06-30"
 
 keywords: troubleshooting for Datastax, cassandra, datastax, dse
 
@@ -22,12 +22,15 @@ content-type: troubleshoot
 {:pre: .pre}
 {:note:.deprecated}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
-
+{{site.data.keyword.attribute-definition-list}}
 
 # Why can’t I connect to my DataStax deployment?
 {: #troubleshoot-connect}
 {: #troubleshoot}
 {: #support}
+
+{{site.data.keyword.databases-for-cassandra_full}} is deprecated and no longer supported as of 30 June 2024. For more information, see the [deprecation details](/docs/databases-for-cassandra?topic=databases-for-cassandra-deprecation#dep_details).
+{: deprecated}
 
 If you encounter errors when connecting to your {{site.data.keyword.databases-for-cassandra_full}} deployment, review these common causes and resolutions.
 {: #shortdesc}
