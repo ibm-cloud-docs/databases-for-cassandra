@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2018, 2023
-lastupdated: "2023-04-11"
+lastupdated: "2023-06-20"
 
 keywords: databases, soc, hipaa, gdpr, terms, cassandra, datastax, dse, datastax security compliance, datastax dedicated cores
 
@@ -13,6 +13,9 @@ subcollection: databases-for-cassandra
 
 # Security and Compliance
 {: #security-compliance}
+
+{{site.data.keyword.databases-for-cassandra_full}} is deprecated and no longer supported as of 30 June 2024. For more information, see the [deprecation details](/docs/databases-for-cassandra?topic=databases-for-cassandra-deprecation#dep_details).
+{: deprecated}
 
 ## Protection Against Unauthorized Access
 {: #security-compliance-unauth-access}
