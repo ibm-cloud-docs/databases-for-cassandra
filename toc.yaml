@@ -8,14 +8,14 @@ toc:
     service-name: databases-for-cassandra
     version: 2
     audience: service
-    href: /docs/databases-for-cassandra?topic=databases-for-cassandra-getting-started
+    href: /docs/databases-for-cassandra
     release-level: deprecated
     console-page: /catalog/databases-for-cassandra
     product-page: https://www.ibm.com/cloud/databases-for-cassandra
     path: databases-for-cassandra
     label: Databases For DataStax
-  entries: 
-  - navgroup: 
+  entries:
+  - navgroup:
       id: learn
       topics:
       - getting-started.md
@@ -30,7 +30,7 @@ toc:
       - learn-security-compliance.md
       - learn-pricing.md
       - release-notes.md
-  - navgroup: 
+  - navgroup:
       id: howto
       topics:
       - howto-admin-password.md
@@ -39,23 +39,23 @@ toc:
       - include: ../cloud-databases/howto-deprovisioning.md
       - include: ../cloud-databases/closures.md
       - include: ../cloud-databases/ha-dr.md
-      - topicgroup: 
+      - topicgroup:
           label: Connecting to Databases for DataStax
-          topics: 
+          topics:
           - connecting-external.md
           - connecting-ibmcloud-app.md
       - howto-user-management.md
-      - topicgroup: 
+      - topicgroup:
           label: Managing Resources
-          topics: 
+          topics:
           - howto-resources-scaling.md
           - howto-autoscaling.md
           - howto-horizontal-scaling.md
       - include: ../cloud-databases/howto-manage-backups.md
       - include: ../cloud-databases/howto-allowlists.md
-      - topicgroup: 
+      - topicgroup:
           label: Tutorials
-          topics: 
+          topics:
           - include: ../cloud-databases/howto-tutorials.md
           - include: ../cloud-databases/hello-world-tutorial.md
           - include: ../cloud-databases/terra-postgres-tutorial.md
@@ -63,23 +63,23 @@ toc:
           - include: ../cloud-databases/k8-tutorial.md
           - include: ../cloud-databases/truck-tracker-tutorial.md
           - include: ../cloud-databases/disk-util-alerts-tutorial.md
-      - topicgroup: 
+      - topicgroup:
           label: Logging and monitoring
-          topics: 
+          topics:
           - include: ../cloud-databases/reference-activity-tracker.md
           - include: ../cloud-databases/reference-logging.md
           - reference-monitoring.md
-      - topicgroup: 
+      - topicgroup:
           label: Enhancing security
-          topics: 
+          topics:
           - include: ../cloud-databases/manage-scc.md
           - include: ../cloud-databases/howto-cbr.md
           - include: ../cloud-databases/cbr-tutorial.md
-  - navgroup: 
+  - navgroup:
       id: help
       topics:
       - ts-connect.md
-  - navgroup: 
+  - navgroup:
       id: reference
       topics:
       - include: ../databases-cli-plugin/cloud-databases-cli.md
@@ -87,9 +87,9 @@ toc:
           label: Cloud Databases API
           href: https://cloud.ibm.com/apidocs/cloud-databases-api
       - include: ../cloud-databases/db-version-policy.md
-      - topicgroup: 
+      - topicgroup:
           label: Connecting over Private Networks
-          topics: 
+          topics:
           - include: ../cloud-databases/howto-vpes.md
           - include: ../cloud-databases/reference-service-endpoints.md
       - include: ../cloud-databases/reference-key-protect.md
